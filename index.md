@@ -1,5 +1,5 @@
 ---
-title: Mapping femminist waves in the digital era
+title: We need to define a name
 cover: /assets/images/covers/cover@xl.jpeg
 members: Giuliano Mozzillo, Jacopo Perico, Noemi Schiavi, Amarildo Shelna, Daniele Zanetti, Shan Zhu, Alice Ziantoni
 description: Short description of the document for the meta tags (limit to 150 characters, longer will be cut by search engines)
