@@ -23,11 +23,11 @@
     .category {
         position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-content: center;
         align-items: center;
         padding: 50px 0;
-        flex-direction: row-reverse;
+        flex-direction: row;
         border-bottom: 1px solid fade(@light, 20);
 
         @media @mobile {
@@ -36,10 +36,13 @@
         }
 
         &_meta {
+            width: calc(100% - 700px);
+            padding-right: 50px;
 
             text-align: right;
 
             @media @mobile {
+                width: 100%;
                 text-align: left;
             }
 
@@ -76,6 +79,7 @@
 
         &_nodes {
             position: relative;
+            width: 700px;
 
 
             @media @mobile {
