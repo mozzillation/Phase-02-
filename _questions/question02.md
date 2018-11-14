@@ -1,5 +1,5 @@
 ---
-title: A crucial question is how to interpret our drawing.
+title: Which are the topics linked to sexism?
 cover: /assets/images/covers/viz02.jpg
 number: 2
 ---

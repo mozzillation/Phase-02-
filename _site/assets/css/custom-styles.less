@@ -1,0 +1,164 @@
+@primary: #ff3603;
+@dark: #1b2029;
+@light: lighten(@dark, 30);
+
+@white: #E8ECEE;
+
+@desktop: ~ "only screen and (min-width: 587px)";
+@mobile: ~ "only screen and (max-width: 586px)";
+
+
+@seconds: 0.5s;
+@ease: @seconds ~ ' cubic-bezier(.23,1,.32,1)';
+
+
+// —————————————————————————————
+// QUESTION 01 — SEEALSOLOGY
+// —————————————————————————————
+#seealsology {
+    background: @dark;
+    color: @white;
+    padding: 75px 0;
+
+    .category {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        padding: 50px 0;
+        flex-direction: row-reverse;
+        border-bottom: 1px solid fade(@light, 20);
+
+        @media @mobile {
+            flex-direction: column;
+            display: block;
+        }
+
+        &_meta {
+
+            text-align: right;
+
+            @media @mobile {
+                text-align: left;
+            }
+
+            h1,
+            h2 {
+                font-weight: normal;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                padding: 0;
+                margin: 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            h2 {
+                color: @light;
+
+                &:first-child {
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 0.8rem;
+                    letter-spacing: 1px;
+
+                    span {
+                        border-bottom: 1px solid @light;
+                    }
+                }
+            }
+        }
+
+
+        &_nodes {
+            position: relative;
+
+
+            @media @mobile {
+                width: 100%;
+                padding: 25px 0 0 0;
+                border: 0;
+            }
+
+            &__popup {
+                max-width: 100px;
+                opacity: 0;
+                padding: 5px;
+                background: @dark;
+                color: @white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 10px;
+                text-transform: uppercase;
+                font-weight: bold;
+                transition: opacity @ease;
+
+                &.is-visible {
+                    opacity: 1;
+                }
+
+            }
+
+            &__svg {
+                display: block;
+                width: 700px;
+
+                @media @mobile {
+                    width: 100%;
+                }
+
+                circle {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    transition: fill @ease, opacity @ease;
+                    opacity: 0 !important;
+
+                    &.is-visible {
+                        opacity: 1 !important;
+                    }
+
+                    &.hide {
+                        opacity: 0.05 !important;
+                        fill: #fff !important;
+                    }
+
+                    &[r="5"] {
+                        fill: #414b565e;
+                    }
+
+                    &[r="10"] {
+                        fill: #414B56;
+                        opacity: 1;
+                    }
+
+                    &[r="15"] {
+                        opacity: 0.8;
+                        fill: #fff;
+                    }
+
+
+                    &:hover {
+                        fill: @primary;
+                        opacity: 1;
+
+                    }
+
+
+
+                }
+
+            }
+        }
+
+
+    }
+
+
+}

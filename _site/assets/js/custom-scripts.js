@@ -1,41 +1,45 @@
-// This is Javascript code to make the example in question02 work, fell free to remove this when you start working on your project
-$(document).ready(function() {
+// QUESTION 01 
 
-    $('.bubble').on('click', function(event) {
+$('#seealsology').find('.category_nodes').on('mousemove', function (evt) {
+    var x = evt.pageX - $(this).offset().left + 10;
+    var y = evt.pageY - $(this).offset().top + -20;
 
-        event.stopPropagation();
-        let listIndex = $(event.currentTarget).index() + 1;
-
-        $('.label').removeClass('is-visible');
-        $('.label:nth-child(' + listIndex + ')').addClass('is-visible');
-
+    $('.category_nodes__popup').css({
+        top: y,
+        left: x
     });
 
-    $(':not(.bubble)').on('click', function(event) {
+    var parent = $(this).parent();
 
-        // console.log('event fired!');
-        $('.label').removeClass('is-visible');
+//    console.log(parent);
 
-    })
+    parent.find('circle').hover(function () {
+            var $this = $(this);
+            var pageName = $this.data('name');
+            parent.find('.category_nodes__popup').addClass('is-visible').html(pageName);
+            parent.find('circle').not($this).addClass('hide');
+        },
+        function () {
+            $('.category_nodes__popup').removeClass('is-visible')
+            $('circle').removeClass('hide');
+        });
 
-    $('.legend__item').on('mouseenter', function(event) {
 
-        // console.log($(event.currentTarget).attr("data-area"));
-        let area = $(event.currentTarget).attr("data-area");
-
-        $('.label').removeClass('is-visible');
-
-        $('.legend__item').addClass('is-out-focus');
-        $(event.currentTarget).removeClass('is-out-focus');
-
-        $('.bubble').addClass('is-out-focus');
-        $('.' + area).removeClass('is-out-focus');
-
-    }).on('mouseleave', function(event) {
-
-        $('.bubble').removeClass('is-out-focus');
-        $('.legend__item').removeClass('is-out-focus');
+    $('circle').click(function () {
+        var pageName = $(this).data('name');
+        pageName = pageName.replace(/ /g, '_');
+        console.log(pageName);
+        window.open('https://en.wikipedia.org/wiki/' + pageName);
 
     })
 
+});
+
+
+
+$('circle').each(function (i) {
+    var row = $(this);
+    setTimeout(function () {
+        row.toggleClass('is-visible', !row.hasClass('is-visible'));
+    }, 10 * i);
 });
