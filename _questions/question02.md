@@ -18,8 +18,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ### Data
-##### Data Source: [DensityDesign](http://densitydesign.org/)
-##### Timestamp: 19/10/2018
-##### [View Data (500Kb)](http://densitydesign.org/)
+##### Data Source: [Wikipedia](https://en.wikipedia.org), [SeeAlsology](http://tools.medialab.sciences-po.fr/seealsology/)
+##### Timestamp: 11/11/2018
+##### [View Data (93KB)]({{ '/dataset/viz01-gephi.xlsx' | relative_url }})
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
