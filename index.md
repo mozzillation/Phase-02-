@@ -1,5 +1,5 @@
 ---
-title: We need to define a name
+title: Do we still need Feminism?
 cover: /assets/images/covers/cover@xl.jpeg
 members: Giuliano Mozzillo, Jacopo Perico, Noemi Schiavi, Amarildo Shelna, Daniele Zanetti, Shan Zhu, Alice Ziantoni
 description: Short description of the document for the meta tags (limit to 150 characters, longer will be cut by search engines)

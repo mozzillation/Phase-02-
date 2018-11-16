@@ -10,7 +10,7 @@ header.cover {
     grid-template-rows: repeat(var(--grid-rows), calc((100vh - var(--grid-gap) * ((var(--grid-rows) - 1) / 2)) / var(--grid-rows)));
     grid-gap: calc(var(--grid-gap) / 2) var(--grid-gap);
     color: var(--color-light);
-    
+
 }
 
 .cover__image {
@@ -25,7 +25,7 @@ header.cover {
 .cover__background {
     grid-column: 1 / 15;
     grid-row: 7 / 13;
-    background-color: var(--color-main);
+    background-color: var(--color-dark);
 }
 
 .cover__title {
@@ -64,7 +64,7 @@ main.content {
 }
 
 .intro p {
-//    font-size: 1.2rem !important;
+    //    font-size: 1.2rem !important;
     line-height: 1.8;
 }
 

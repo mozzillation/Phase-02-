@@ -1,5 +1,5 @@
 ---
-title: Which are the topics linked to sexism?
+title: Which are the sources that talk about gender-based hate and what is their orientation?
 cover: /assets/images/covers/viz02.jpg
 number: 2
 ---
