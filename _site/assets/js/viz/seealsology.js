@@ -4,7 +4,7 @@ $(document).ready(function () {
     let seealsology = document.getElementById("seealsology-viz");
 
     let width = d3.selectAll("#seealsology-viz").node().getBoundingClientRect().width,
-        height = $(window).height() - 300,
+        height = 700,
         padding = window.innerWidth * 0.1;
 
     var t = d3.transition()
