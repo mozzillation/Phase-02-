@@ -1,6 +1,6 @@
 ---
 title: Which are the topics linked to sexism?
-cover: /assets/images/covers/viz02.jpg
+cover: /assets/images/covers/viz01.jpg
 number: 1
 ---
 ### Description
