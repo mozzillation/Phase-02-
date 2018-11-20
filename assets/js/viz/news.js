@@ -104,7 +104,7 @@ $(document).ready(function () {
                     var width = $(this).attr('width');
                     var height = $(this).attr('height');
 
-                    var path = 'dataset/viz03/' + array[i].path;
+                    var path = 'dataset/viz04/' + array[i].path;
 
 
 
