@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    
-if ($('#seealsology').length) {
 
-    console.log("init seealsology");
-        
+    if ($('#seealsology').length) {
+
+        console.log("init seealsology");
+
         let seealsology = document.getElementById("seealsology-viz");
 
         let width = d3.selectAll("#seealsology-viz").node().getBoundingClientRect().width,
@@ -39,6 +39,10 @@ if ($('#seealsology').length) {
 
 
         d3.csv("assets/js/viz/data/seealsology.csv", function (error, data) {
+
+            data = data.filter(function (d) {
+                return d.ID > 0;
+            })
 
 
             if (error) throw error;
@@ -126,9 +130,6 @@ if ($('#seealsology').length) {
             svg.selectAll('.circ')
                 .data(data)
                 .enter()
-                .filter(function (d) {
-                    return d.ID > 0
-                })
                 .append('circle').classed('circ', true)
                 .attr('data-name', function (d) {
                     return d.name
@@ -141,10 +142,10 @@ if ($('#seealsology').length) {
                     }
                 })
                 .attr('cx', function (d) {
-                    return height / 2;
+                    return x(d.distance);
                 })
                 .attr('cy', function (d) {
-                    return height / 2
+                    return d.y;
                 })
                 .attr("fill", function (d) {
                     return "#ffffff";
@@ -156,28 +157,30 @@ if ($('#seealsology').length) {
             let simulation = d3.forceSimulation(data)
                 .force('x', d3.forceX(function (d) {
                     return x(d.distance)
-                }).strength(10))
-                .force('y', d3.forceY(height / 2).strength(10))
-                .force('collide', d3.forceCollide(function (d) {
-                    return size(0.5)
-                }).iterations(32))
-                .alphaDecay(0.01)
-                .alpha(0.01)
+                }).strength(0.02))
+                .force('y', d3.forceY(height / 2).strength(0.02))
+                .force('collision', d3.forceCollide(function (d) {
+                    return size(0.2) + 2;
+                }).iterations(4))
+                .alphaTarget(1)
+                .alpha(1)
                 .on('tick', tick)
+                .alpha(1)
+                .restart()
 
-            let init_decay;
-            init_decay = setTimeout(function () {
-                console.log('init alpha decay')
-
-
-                $('.circ').each(function (i) {
-                    var row = $(this);
-                    setTimeout(function () {
-                        row.addClass('is-visible', !row.hasClass('is-visible'));
-                    }, 1 * i);
-                });
-
-            }, 500);
+            //            let init_decay;
+            //            init_decay = setTimeout(function () {
+            //                console.log('init alpha decay')
+            //
+            //
+            //                $('.circ').each(function (i) {
+            //                    var row = $(this);
+            //                    setTimeout(function () {
+            //                        row.addClass('is-visible', !row.hasClass('is-visible'));
+            //                    }, 1 * i);
+            //                });
+            //
+            //            }, 500);
 
 
 
@@ -223,15 +226,14 @@ if ($('#seealsology').length) {
 
                 simulation.force('y', d3.forceY(function (d) {
                         return y2(d.ID);
-                    }).strength(10))
+                    }))
                     .force('x', d3.forceX(function (d) {
                         return x(d.distance)
-                    }).strength(10));
+                    }));
 
 
                 simulation
-                    .alphaDecay(0.01)
-                    .alpha(0.01)
+                    .alpha(1)
                     .restart()
             })
 
@@ -243,14 +245,11 @@ if ($('#seealsology').length) {
 
                 d3.select(".yAxis").transition(t).style("opacity", 0);
 
-                simulation.force('y', d3.forceY(height / 2).strength(10)).force('x', d3.forceX(function (d) {
-                    return x(d.distance)
-                }).strength(10));
-
                 simulation
-                    .alphaDecay(0.1)
-                    .alpha(0.1)
-                    .restart()
+                    .force('y', d3.forceY(height / 2).strength(0.02))
+                    .force('x', d3.forceX(function (d) {
+                        return x(d.distance)
+                    }).strength(0.02)).restart()
 
                 svg.selectAll('.circ').attr("fill", function (d) {
                     return "#FFFFFF";
