@@ -145,7 +145,7 @@ $(document).ready(function () {
                     return x(d.distance);
                 })
                 .attr('cy', function (d) {
-                    return d.y;
+                    return x(d.distance);
                 })
                 .attr("fill", function (d) {
                     return "#ffffff";
@@ -165,23 +165,18 @@ $(document).ready(function () {
                 .alphaTarget(1)
                 .alpha(1)
                 .on('tick', tick)
-                .alpha(1)
                 .restart()
 
-            //            let init_decay;
-            //            init_decay = setTimeout(function () {
-            //                console.log('init alpha decay')
-            //
-            //
-            //                $('.circ').each(function (i) {
-            //                    var row = $(this);
-            //                    setTimeout(function () {
-            //                        row.addClass('is-visible', !row.hasClass('is-visible'));
-            //                    }, 1 * i);
-            //                });
-            //
-            //            }, 500);
-
+            let init_decay;
+            init_decay = setTimeout(function () {
+                console.log('init alpha decay')
+                $('.circ').each(function (i) {
+                    var row = $(this);
+                    setTimeout(function () {
+                        row.addClass('is-visible', !row.hasClass('is-visible'));
+                    }, 1 * i);
+                });
+            }, 1000);
 
 
             // CLICK "CATEGORY" BUTTON
@@ -246,10 +241,10 @@ $(document).ready(function () {
                 d3.select(".yAxis").transition(t).style("opacity", 0);
 
                 simulation
-                    .force('y', d3.forceY(height / 2).strength(0.02))
+                    .force('y', d3.forceY(height / 2).strength(0.03))
                     .force('x', d3.forceX(function (d) {
                         return x(d.distance)
-                    }).strength(0.02)).restart()
+                    }).strength(0.03)).restart()
 
                 svg.selectAll('.circ').attr("fill", function (d) {
                     return "#FFFFFF";
@@ -290,7 +285,6 @@ $(document).ready(function () {
             $('circle').click(function () {
                 var pageName = $(this).data('name');
                 pageName = pageName.replace(/ /g, '_');
-                console.log(pageName);
                 window.open('https://en.wikipedia.org/wiki/' + pageName);
 
             })
