@@ -181,7 +181,12 @@ $(document).ready(function () {
                     return height / 2;
                 })
                 .attr("fill", function (d) {
-                    return "#ffffff";
+                    if (d.seed) {
+                        return "#ffffff";
+                    } else {
+                        return "#ffffff";
+                    }
+
                 })
             //            .on("mouseout", handleMouseOut);        // .attr("stroke", "rgba(0,0,0,.2)")
             // .attr("stroke-width", 1)
@@ -302,14 +307,16 @@ $(document).ready(function () {
             var x = evt.pageX - $(this).offset().left + 10;
             var y = evt.pageY - $(this).offset().top + -20;
 
-            $('#seealsology .popup').css({
-                top: y,
-                left: x
-            });
 
             var parent = $(this).parent();
 
             parent.find('circle').hover(function () {
+
+                    $('#seealsology .popup').css({
+                        top: y,
+                        left: x
+                    });
+
                     var $this = $(this);
                     var pageName = $this.data('name');
                     parent.find('#seealsology .popup').addClass('is-visible').html(pageName);
