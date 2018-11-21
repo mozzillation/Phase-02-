@@ -92,9 +92,6 @@ $(document).ready(function () {
 
 
 
-
-
-
                 $(this).find('rect').each(function (i) {
 
                     var random = 'img' + Math.floor((Math.random() * 99999) + 1);
@@ -106,10 +103,6 @@ $(document).ready(function () {
 
                     var path = 'dataset/viz04/' + array[i].path;
 
-
-
-
-
                     var img = document.createElementNS('http://www.w3.org/2000/svg', 'image');
                     img.setAttributeNS(null, 'height', height);
                     img.setAttributeNS(null, 'width', width);
@@ -118,7 +111,6 @@ $(document).ready(function () {
                     img.setAttributeNS(null, 'y', y);
                     img.setAttributeNS(null, 'visibility', 'visible');
                     img.setAttribute('filter', 'url(#grayscale)');
-
                     $('svg').append(img);
 
 
