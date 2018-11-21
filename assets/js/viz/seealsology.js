@@ -7,7 +7,7 @@ $(document).ready(function () {
         let seealsology = document.getElementById("seealsology-viz");
 
         let width = d3.selectAll("#seealsology-viz").node().getBoundingClientRect().width,
-            height = 700,
+            height = 850,
             padding = window.innerWidth * 0.1;
 
         var t = d3.transition()
@@ -43,6 +43,7 @@ $(document).ready(function () {
             data = data.filter(function (d) {
                 return d.ID > 0;
             })
+
 
 
             if (error) throw error;
@@ -96,6 +97,38 @@ $(document).ready(function () {
                 .call(distanceAxis)
                 .attr("transform", "translate(0, " + (height + 20) + ")")
                 .classed("xAxis", true);
+            //                .style("opacity", 0);
+
+            var domainWidth = $('.xAxis path.domain')[0].getBoundingClientRect().width;
+
+            console.log();
+
+            svg
+                .append("circle")
+                .classed("radius", true)
+                .attr("r", domainWidth / 3 * 1)
+                .attr('cx', x(0))
+                .attr('cy', height / 2)
+                .attr('fill', 'rgba(255, 255, 255, 0)');
+
+
+            svg
+                .append("circle")
+                .classed("radius", true)
+                .attr("r", domainWidth / 3 * 2)
+                .attr('cx', x(0))
+                .attr('cy', height / 2)
+                .attr('fill', 'rgba(255, 255, 255, 0)');
+
+            svg
+                .append("circle")
+                .classed("radius", true)
+                .attr("r", domainWidth / 3 * 3)
+                .attr('cx', x(0))
+                .attr('cy', height / 2)
+                .attr('fill', 'rgba(255, 255, 255, 0)');
+
+
 
             svg.append("g")
                 .call(categoryAxis)
@@ -142,10 +175,10 @@ $(document).ready(function () {
                     }
                 })
                 .attr('cx', function (d) {
-                    return x(d.distance);
+                    return width / 2;
                 })
                 .attr('cy', function (d) {
-                    return x(d.distance);
+                    return height / 2;
                 })
                 .attr("fill", function (d) {
                     return "#ffffff";
@@ -154,14 +187,15 @@ $(document).ready(function () {
             // .attr("stroke-width", 1)
 
             // Start force layout
+
             let simulation = d3.forceSimulation(data)
                 .force('x', d3.forceX(function (d) {
                     return x(d.distance)
-                }).strength(0.02))
-                .force('y', d3.forceY(height / 2).strength(0.02))
+                }).strength(0.025))
+                .force('y', d3.forceY(height / 2).strength(0.025))
                 .force('collision', d3.forceCollide(function (d) {
-                    return size(0.2) + 2;
-                }).iterations(4))
+                    return size(0.5) + 2;
+                }).iterations(20))
                 .alphaTarget(1)
                 .alpha(1)
                 .on('tick', tick)
@@ -176,7 +210,7 @@ $(document).ready(function () {
                         row.addClass('is-visible', !row.hasClass('is-visible'));
                     }, 1 * i);
                 });
-            }, 1000);
+            }, 1500);
 
 
             // CLICK "CATEGORY" BUTTON
@@ -184,6 +218,8 @@ $(document).ready(function () {
             $('#category').click(function () {
 
                 $('#seealsology button').toggleClass('active');
+                $('.xAxis').toggleClass('is-visible');
+                $('.radius').toggleClass('is-hidden');
 
                 console.log("CARICA CATEGORIE");
 
@@ -221,10 +257,10 @@ $(document).ready(function () {
 
                 simulation.force('y', d3.forceY(function (d) {
                         return y2(d.ID);
-                    }))
+                    }).strength(0.05))
                     .force('x', d3.forceX(function (d) {
                         return x(d.distance)
-                    }));
+                    }).strength(0.05));
 
 
                 simulation
@@ -236,15 +272,17 @@ $(document).ready(function () {
 
             $('#reset').click(function () {
                 console.log("RESETTA");
+                $('.xAxis').toggleClass('is-visible');
+                $('.radius').toggleClass('is-hidden');
                 $('#seealsology button').toggleClass('active');
 
                 d3.select(".yAxis").transition(t).style("opacity", 0);
 
                 simulation
-                    .force('y', d3.forceY(height / 2).strength(0.03))
+                    .force('y', d3.forceY(height / 2).strength(0.1))
                     .force('x', d3.forceX(function (d) {
                         return x(d.distance)
-                    }).strength(0.03)).restart()
+                    }).strength(0.1)).restart()
 
                 svg.selectAll('.circ').attr("fill", function (d) {
                     return "#FFFFFF";

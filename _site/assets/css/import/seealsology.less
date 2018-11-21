@@ -2,6 +2,7 @@
 // QUESTION 01 — SEEALSOLOGY
 // —————————————————————————————
 #seealsology {
+    overflow: hidden;
     background: @dark;
     color: @white;
     padding: 25px 0 50px 0;
@@ -34,6 +35,8 @@
 
 
     .header {
+        position: relative;
+        z-index: 10000;
 
 
         &__button {
@@ -130,7 +133,9 @@
 
     svg {
         width: 100% !important;
-        height: 700px;
+        height: 850px;
+        overflow: visible;
+
 
         circle {
             position: absolute;
@@ -160,7 +165,33 @@
             stroke: none;
         }
 
+        circle.radius {
+            opacity: 1 !important;
+            stroke-width: 1px;
+            stroke: @light;
+            opacity: 0.6;
+            pointer-events: none;
+            transition: opacity @ease;
+
+            &.is-hidden {
+                opacity: 0 !important;
+            }
+        }
+
         .xAxis {
+
+            opacity: 0;
+
+            transition: opacity @ease;
+
+            &.is-visible {
+                opacity: 1;
+            }
+
+            circle {
+                opacity: 1 !important;
+            }
+
             .tick {
                 text {
                     fill: @white;
