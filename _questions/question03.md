@@ -1,6 +1,6 @@
 ---
-title: Which are the differences between different phases of feminism?
-cover: /assets/images/covers/viz02.jpg
+title: What is the evolution of feminism throughout the four waves?
+cover: /assets/images/covers/viz03.jpg
 number: 3
 ---
 ### Description

@@ -59,9 +59,8 @@ $(document).ready(function () {
             }));
 
             y2.domain(d3.extent(data, function (d) {
-                if (d.ID > 0) {
-                    return d.ID;
-                }
+                return d.ID;
+
             }));
 
             size.domain(d3.extent(data, function (d) {
@@ -147,13 +146,13 @@ $(document).ready(function () {
                             return "Seed";
                             break;
                         case 1:
-                            return "Level 1";
+                            return "Distance 1";
                             break;
                         case 2:
-                            return "Level 2";
+                            return "Distance 2";
                             break;
                         case 3:
-                            return "Level 3";
+                            return "Distance 3";
                             break;
                     }
                 }).attr('class', 'buh');
@@ -196,8 +195,8 @@ $(document).ready(function () {
             let simulation = d3.forceSimulation(data)
                 .force('x', d3.forceX(function (d) {
                     return x(d.distance)
-                }).strength(0.025))
-                .force('y', d3.forceY(height / 2).strength(0.025))
+                }).strength(0.1))
+                .force('y', d3.forceY(height / 2).strength(0.1))
                 .force('collision', d3.forceCollide(function (d) {
                     return size(0.5) + 2;
                 }).iterations(20))

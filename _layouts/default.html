@@ -38,6 +38,10 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     {% if page.is_question == true %}
+
+
+    <!-- PAGINA 01 -->
+    {% if page.number == 1 %}
     <script src="https://d3js.org/d3.v4.min.js"> </script>
     <script src="https://d3js.org/d3-color.v1.min.js"></script>
     <script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
@@ -47,8 +51,26 @@
     <script src="https://d3js.org/d3-timer.v1.min.js"></script>
     <script src="https://d3js.org/d3-transition.v1.min.js"></script>
     <script src="{{ '/assets/js/viz/seealsology.js' | relative_url }}" charset="utf-8"></script>
+    {% endif %}
+
+    <!-- PAGINA 02 -->
+    {% if page.number == 2 %}
     <script src="{{ '/assets/js/viz/queries.js' | relative_url }}" charset="utf-8"></script>
+    {% endif %}
+
+    <!-- PAGINA 03 -->
+    {% if page.number == 3 %}
+    <script src="{{ '/assets/js/viz/timeline.js' | relative_url }}" charset="utf-8"></script>
+    {% endif %}
+
+    <!-- PAGINA 03 -->
+    {% if page.number == 4 %}
     <script src="{{ '/assets/js/viz/news.js' | relative_url }}" charset="utf-8"></script>
+    {% endif %}
+
+
+
+
 
     <script src="https://unpkg.com/intersection-observer@0.5.0/intersection-observer.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/1.4.4/scrollama.min.js" integrity="sha256-1NHjvSjKf8OP+R7cPyIewcfSj2GoMuiKkZechn/9y0Y=" crossorigin="anonymous"></script>

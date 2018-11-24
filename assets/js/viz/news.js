@@ -129,14 +129,16 @@ $(document).ready(function () {
             var y = evt.pageY - $(this).offset().top + 20;
 
 
-            $('#news .popup').css({
-                top: y,
-                left: x
-            });
+
 
 
             $('image').hover(function () {
                 var img = $(this).attr('href');
+
+                $('#news .popup').css({
+                    top: y,
+                    left: x
+                });
 
                 $('.popup').html('<img src="' + img + '" />').addClass('is-visible');
 
