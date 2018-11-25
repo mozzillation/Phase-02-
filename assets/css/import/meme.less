@@ -6,6 +6,7 @@
     &-viz {
 
         cursor: zoom-in;
+        transition: transform @ease;
 
         &.zoom-out {
             cursor: zoom-out;
@@ -14,11 +15,7 @@
                 opacity: 1;
 
                 image {
-                    position: relative;
-
-                    &:hover {
-                        transform: scale(1.5);
-                    }
+                    transition: transform @ease;
 
                 }
 
@@ -33,12 +30,10 @@
         }
 
 
-        transition: transform @ease;
-
-
         #images {
             opacity: 0.2;
             transition: opacity @ease;
+
         }
 
         #legend {

@@ -31,7 +31,7 @@ $(document).ready(function () {
             } else {
                 $this.addClass('zoom-out');
                 $this.css({
-                    'transform': 'scale(3)',
+                    'transform': 'scale(5)',
                     'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
                 });
 
