@@ -359,7 +359,7 @@
         <line class="st10" x1="1139.5" y1="146.5" x2="1139.5" y2="155.2" />
         <line class="st10" x1="1133.4" y1="146.5" x2="1133.4" y2="155.2" />
     </g>
-    <g id="activities" data-id="category">
+    <g id="activities" data-id="category" data-viz="2">
         <g>
             <rect x="1668.9" y="276" class="st11" width="141.5" height="246.6" />
             <path class="st12" d="M1808.9,277.5v243.6h-138.5V277.5H1808.9 M1811.9,274.5h-144.5v249.6h144.5V274.5L1811.9,274.5z" />

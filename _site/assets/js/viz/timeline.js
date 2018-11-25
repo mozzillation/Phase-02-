@@ -49,11 +49,35 @@ $(document).ready(function () {
                     $('.events').slideUp();
                     $(ID).slideDown();
 
+                }
 
+
+                if ($(this).data('viz') == 2) {
+
+                    $('#timeline-viz svg').addClass('is-hidden');
+                    $('#viz2').addClass('is-visible');
 
                 }
 
+
+
             })
+
+
+
+            $('.back h1').click(function () {
+
+                $('#timeline-viz svg g[data-id="category"]').removeClass('is-hidden is-disabled is-active')
+                $('#timeline-viz svg').removeClass('is-hidden');
+                $('#viz2').removeClass('is-visible');
+
+            });
+
+
+
+
+
+
 
 
         };
