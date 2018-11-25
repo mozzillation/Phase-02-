@@ -1,0 +1,57 @@
+#meme {
+    overflow: hidden;
+
+
+
+    &-viz {
+
+        cursor: zoom-in;
+
+        &.zoom-out {
+            cursor: zoom-out;
+
+            #images {
+                opacity: 1;
+
+                image {
+                    position: relative;
+
+                    &:hover {
+                        transform: scale(1.5);
+                    }
+
+                }
+
+
+            }
+
+            #legend {
+                opacity: 0;
+            }
+
+
+        }
+
+
+        transition: transform @ease;
+
+
+        #images {
+            opacity: 0.2;
+            transition: opacity @ease;
+        }
+
+        #legend {
+            transition: opacity @ease;
+        }
+
+        #bg {
+            image {
+                opacity: 0.2;
+
+            }
+        }
+
+
+    }
+}
