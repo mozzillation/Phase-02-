@@ -44,7 +44,7 @@ $(document).ready(function () {
                     console.log(ID);
 
                     $('#timeline-viz svg g[data-id="category"]').addClass('is-disabled').removeAttr('data-disabled');
-                    $this.removeClass('is-hidden is-disabled is-active').addClass('is-active');
+                    $this.removeClass('is-hidden is-disabled is-active legend').addClass('is-active');
 
                     $('.events').slideUp();
                     $(ID).slideDown();
@@ -97,9 +97,9 @@ $(document).ready(function () {
 
             $('#timeline-viz2 svg > g[data-id="campaign"]').hover(function () {
                 $this = $(this);
-                $('#timeline-viz2 svg g[data-id="campaign"]').not($this).addClass('is-hidden');
+                $('#timeline-viz2 svg g[data-id="campaign"], #header2').not($this).addClass('is-hidden');
             }, function () {
-                $('#timeline-viz2 svg > g').removeClass('is-hidden');
+                $('#timeline-viz2 svg > g, #header2').removeClass('is-hidden');
 
 
             })

@@ -4,7 +4,7 @@ $(document).ready(function () {
 
         console.log("init queries");
 
-        $.get("./assets/js/viz/data/queries.svg", function (data) {
+        $.get("./assets/js/viz/data/queries2.svg", function (data) {
             var svg = new XMLSerializer().serializeToString(data.documentElement);
             $('#queries-viz').append(svg);
             callback();

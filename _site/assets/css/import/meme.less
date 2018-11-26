@@ -11,6 +11,10 @@
         &.zoom-out {
             cursor: zoom-out;
 
+            #color {
+                opacity: 0.4;
+            }
+
             #images {
                 opacity: 1;
 
@@ -27,6 +31,11 @@
             }
 
 
+        }
+
+        #color {
+            mix-blend-mode: multiply;
+            transition: opacity @ease;
         }
 
 

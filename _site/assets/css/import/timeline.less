@@ -53,6 +53,14 @@
             transition: opacity @ease;
 
 
+
+            g#activities {
+                animation: blink 1s infinite alternate;
+
+
+            }
+
+
             &.is-hidden {
                 opacity: 0;
             }
@@ -95,11 +103,11 @@
             }
 
             .st7 {
-                fill: url(#SVGID_1_);
+                fill: url(#SVGID_4_);
             }
 
             .st8 {
-                fill: url(#SVGID_2_);
+                fill: url(#SVGID_5_);
             }
 
             .st9 {
@@ -119,6 +127,7 @@
             .st11 {
                 opacity: 0.15;
                 fill: #1B2029;
+                enable-background: new;
             }
 
             .st12 {
@@ -126,41 +135,72 @@
             }
 
             .st13 {
-                fill: url(#SVGID_3_);
+                fill: url(#SVGID_6_);
                 fill-opacity: 0.5;
             }
 
             .st14 {
+                opacity: 0.1;
                 fill: #30D840;
             }
 
             .st15 {
-                fill: #FF7B22;
+                fill: #30D840;
             }
 
             .st16 {
-                fill: #FFAC8D;
+                opacity: 0.1;
+                fill: #FF7B22;
             }
 
             .st17 {
-                fill: #225BFC;
+                fill: #FF7B22;
             }
 
             .st18 {
-                fill: #1B2029;
+                opacity: 0.1;
+                fill: #FFAC8D;
+            }
+
+            .st19 {
+                fill: #FFAC8D;
+            }
+
+            .st20 {
+                fill: #225BFC;
+                fill-opacity: 0.1;
                 stroke: #225BFC;
                 stroke-width: 3;
             }
 
-            .st19 {
+            .st21 {
+                fill: #225BFC;
+            }
+
+            .st22 {
+                opacity: 0.1;
                 fill: #00F3FF;
             }
 
-            .st20 {
+            .st23 {
+                fill: #00F3FF;
+            }
+
+            .st24 {
+                opacity: 0.1;
                 fill: #F2D51E;
             }
 
-            .st21 {
+            .st25 {
+                fill: #F2D51E;
+            }
+
+            .st26 {
+                opacity: 0.1;
+                fill: #9471FF;
+            }
+
+            .st27 {
                 fill: #9471FF;
             }
 
@@ -275,6 +315,11 @@
             top: 0;
             left: 0;
             width: 100vw;
+            transition: opacity @ease;
+
+            &.is-hidden {
+                opacity: 0;
+            }
 
             .header {
                 display: block;
@@ -285,26 +330,52 @@
                     overflow: hidden;
 
                     h1 {
+                        border: 1px solid @white;
+                        background: 0;
+                        color: @white;
+                        letter-spacing: 1px;
+                        font-size: 0.8rem;
+                        line-height: 0.8rem;
+                        padding: 15px;
+                        text-transform: uppercase;
                         float: left;
-                        display: block;
-                        border-bottom: 1px solid @white;
+                        border-radius: 20px;
                         cursor: pointer;
                         transition: opacity @ease;
-                        padding-bottom: 5px;
 
                         &:hover {
                             opacity: 0.6;
                         }
                     }
+
+                    h2 {}
+
                 }
 
                 .text {
-                    max-width: 400px;
+                    max-width: 500px;
+                    padding: 10px 0;
+                    margin: 0px 0 20px 0;
+                    border-top: 2px solid @white;
+                    border-bottom: 1px dotted @white;
 
                     h1 {
                         font-size: 24px;
                         line-height: 32px;
                         font-weight: bold;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                    }
+
+
+                    h2 {
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: normal;
+                        padding-top: 0;
+                        margin-top: 0;
+                        color: @white;
+                        text-transform: none;
                     }
 
                     p {
@@ -329,7 +400,11 @@
 
 
 
-
+            .legend {
+                [id^="events"] {
+                    opacity: 1;
+                }
+            }
 
 
 
@@ -352,6 +427,10 @@
 
                 &.is-hidden {
                     opacity: 0.05;
+
+                    [id^="events"] {
+                        opacity: 0;
+                    }
                 }
             }
 
@@ -521,4 +600,15 @@
     }
 
 
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
 }

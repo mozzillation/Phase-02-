@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 
 
-        $.get("./assets/js/viz/data/meme/meme.svg", function (data) {
+        $.get("./assets/js/viz/data/meme/meme2.svg", function (data) {
             var svg = new XMLSerializer().serializeToString(data.documentElement);
             $('#meme-viz').append(svg);
             callback();

@@ -122,8 +122,6 @@ $(document).ready(function () {
 
         });
 
-
-
         $('#news').on('mousemove', function (evt) {
             var x = evt.pageX - $(this).offset().left + 10;
             var y = evt.pageY - $(this).offset().top + 20;

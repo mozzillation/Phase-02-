@@ -22,13 +22,13 @@ nav {
 
 .nav__background-image {
     position: absolute;
-    width: calc(100% - 6rem);
-    height: calc(100% - 6rem);
+    width: calc(100% - 0rem);
+    height: calc(100% - 0rem);
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center;
     object-position: center;
-    margin: 3rem;
+    margin: 0rem;
     opacity: 0;
     -webkit-transition: opacity 0.8s ease;
     transition: opacity 0.8s ease;
