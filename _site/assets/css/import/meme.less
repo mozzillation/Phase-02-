@@ -1,20 +1,99 @@
 #meme {
     overflow: hidden;
+    position: relative;
+
+
+    #lightbox {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        transition: opacity @ease;
+
+        background: fade(@dark, 80);
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+
+        pointer-events: none;
+        opacity: 0;
+
+
+        img {
+            max-height: 90vh;
+            max-width: 90vw;
+            width: auto;
+            height: auto;
+        }
+
+        &.is-visible {
+            opacity: 1;
+            z-index: 10000;
+            pointer-events: all;
+            cursor: pointer;
+        }
+
+    }
+
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+        z-index: 1000;
+        cursor: zoom-in;
+
+        &.disable {
+            pointer-events: none;
+        }
+    }
+
+
+    .popup {
+
+        background: fade(@dark, 80);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+    }
 
 
 
     &-viz {
 
-        cursor: zoom-in;
+
         transition: transform @ease;
 
         &.zoom-out {
-            cursor: zoom-out;
-
-            #color {
-                opacity: 0.4;
+            #bg {
+                rect {
+                    cursor: zoom-out;
+                }
             }
 
+
+
+            #images_1_ {
+
+                image {
+                    cursor: pointer;
+                }
+
+            }
+
+
+            //            #color {
+            //                opacity: 0.4;
+            //            }
             #images {
                 opacity: 1;
 
@@ -36,6 +115,7 @@
         #color {
             mix-blend-mode: multiply;
             transition: opacity @ease;
+            pointer-events: none;
         }
 
 
@@ -45,11 +125,18 @@
 
         }
 
+
+
+
         #legend {
             transition: opacity @ease;
         }
 
         #bg {
+            rect {
+                cursor: zoom-in;
+            }
+
             image {
                 opacity: 0.2;
 

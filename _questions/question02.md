@@ -18,5 +18,3 @@ We searched for both queries on google.com in incognito mode to be sure that the
 ##### Data Source: [Google Search](https://www.google.com)
 ##### Timestamp: 11/11/2018
 ##### [View Data (93KB)]({{ '/dataset/viz01-gephi.xlsx' | relative_url }})
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

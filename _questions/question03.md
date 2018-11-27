@@ -20,5 +20,3 @@ The timelines of the events are extracted from the english pages of the four wav
 ##### Data Source: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page), [Google Trends](https://trends.google.com/)
 ##### Timestamp: 13/11/2018
 ##### [View Data (492KB)]({{ '/dataset/viz03.zip' | relative_url }})
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

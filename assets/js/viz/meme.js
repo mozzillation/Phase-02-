@@ -18,17 +18,18 @@ $(document).ready(function () {
     function callback() {
 
 
-        $('#meme').click(function (e) {
-            $this = $(this).children('#meme-viz');
+        $('#meme .overlay').click(function (e) {
+
+            $(this).addClass('disable');
+
+            $this = $('#meme-viz');
 
             if ($this.hasClass('zoom-out')) {
-                $this.removeClass('zoom-out');
-
-                $this.css({
-                    'transform': 'scale(1)'
-                });
+                console.log("ce");
 
             } else {
+
+
                 $this.addClass('zoom-out');
                 $this.css({
                     'transform': 'scale(5)',
@@ -41,11 +42,61 @@ $(document).ready(function () {
                             'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
                         });
                     })
+
+
+            };
+        })
+
+
+        $('#meme #bg rect').click(function (e) {
+
+
+
+            $this = $('#meme-viz');
+
+            if ($this.hasClass('zoom-out')) {
+
+                $('#meme .overlay').removeClass('disable');
+
+                console.log($this);
+
+                $this.removeClass('zoom-out');
+                $this.css({
+                    'transform': 'scale(1)'
+                });
+
             }
 
 
 
         })
+
+
+
+
+
+
+        $('#meme-viz image').click(function (e) {
+
+            $this = $('#lightbox');
+
+            $this.addClass('is-visible');
+
+            var src = $(this).attr('xlink:href');
+
+            $this.html('<img src="' + src + '">')
+
+
+
+        })
+
+
+        $('#lightbox').click(function (e) {
+
+            $(this).removeClass('is-visible');
+
+        });
+
 
 
         // tiles set u
