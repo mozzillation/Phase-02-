@@ -9,7 +9,8 @@ number: 8
 
 ### Protocol
 
+
 ### Data
-##### Data Source: [Google News](https://news.google.com/)
+##### Data Source: [MGTOW Forum](https://www.mgtow.com/forums/)
 ##### Timestamp: 11/11/2018
-##### [View Data (6MB)]({{ '/dataset/viz04.zip' | relative_url }})
+##### [View Data (51kb)]({{ '/dataset/viz08.xls' | relative_url }})

@@ -95,6 +95,25 @@
                         fill: #FFF;
                     }
                 }
+
+                #words {
+                    g {
+                        cursor: pointer;
+
+                        &:hover {
+                            path {
+                                fill: @white  !important;
+                                opacity: 1 !important;
+                            }
+
+                            rect {
+                                fill: #4A74FF !important;
+                                opacity: 1 !important;
+                            }
+
+                        }
+                    }
+                }
             }
 
 
@@ -162,6 +181,9 @@
                     .st5 {
                         opacity: 0.2;
                     }
+
+
+
                 }
             }
 
@@ -176,12 +198,110 @@
             transition: fill @ease;
         }
 
+    }
+}
 
+#overlay {
+    background: @light;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 10000000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity @ease;
+
+    &.is-visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+#terms {
+    background: @dark;
+    box-shadow: 0px 0px 500px @dark;
+    overflow: scroll;
+    z-index: 10000000;
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+    right: 10vw;
+    max-width: 80vw;
+    bottom: 0;
+    padding: 50px;
+    color: @white;
+    transform: translateY(100vh);
+    transition: transform @ease;
+
+    &.is-visible {
+        transform: translateY(0);
+    }
+
+
+    &_header {
+        display: flex;
+        align-content: center;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        border-bottom: 1px solid @light;
+
+        h1 {
+            margin: 0;
+            font-weight: normal;
+            letter-spacing: 10px;
+
+            text-transform: uppercase;
+        }
+
+        h2,
+        a {
+            font-size: 16px;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            color: @light;
+        }
+
+        a {
+            border-bottom: 1px solid @light;
+        }
 
 
     }
 
 
+    .word {
+        border-bottom: 1px dotted @light;
+        padding: 25px 0;
 
+        h1 {
+            font-size: 28px;
+            line-height: 28px;
+            margin: 0;
+            text-transform: uppercase;
+            color: @primary;
+            font-weight: normal;
+        }
+
+        p {
+            max-width: 800px;
+            line-height: 26px;
+        }
+
+        blockquote {
+            color: @light;
+            max-width: 800px;
+            border-left: 2px solid @light;
+            margin-left: 0;
+            margin-top: 25px;
+            padding: 0px 0 0 25px;
+            line-height: 26px;
+        }
+    }
 
 }

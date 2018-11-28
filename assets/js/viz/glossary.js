@@ -140,11 +140,52 @@ $(document).ready(function () {
                         $(this).html(legendCount * i)
                     })
                 })
+
+
+
+
+                // ——————
+                $('svg #words > g').click(function () {
+
+                    $('#overlay, #terms').addClass('is-visible');
+                    var target = $(this).data('word');
+
+                    console.log(target);
+
+                    var scrollPos = $('#terms section[data-id="' + target + '"]').position().top;
+
+                    setTimeout(function () {
+                        $('#terms').animate({ // animate your right div
+                            scrollTop: scrollPos // to the position of the target 
+                        }, 400);
+
+                    }, 400)
+
+
+
+                })
+
+                $('#overlay').click(function () {
+                    $('#overlay, #terms').removeClass('is-visible');
+                    $('#terms').animate({ // animate your right div
+                        scrollTop: 0 // to the position of the target 
+                    }, 0);
+                })
+
+
+
             })
 
 
         });
     }
+
+
+
+
+
+
+
 })
 
 
