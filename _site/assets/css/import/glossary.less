@@ -121,18 +121,15 @@
             #legend {
                 max-width: 300px;
                 margin-top: 25px;
-                border: 1px solid @light;
+
                 color: @white;
                 position: relative;
 
 
-                .legend-text {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    bottom: 0;
-                    right: 0;
-                    padding: 0px 0 0 0;
+                .legend-text,
+                .legend-text2 {
+
+                    padding: 5px 0 0 0;
                     font-size: 10px;
                     display: flex;
                     align-content: center;
@@ -154,9 +151,14 @@
 
                 }
 
+                .legend-text2 {
+                    color: @light;
+                }
+
 
                 svg {
                     display: block;
+                    border: 1px solid @light;
 
                     .st0 {
                         fill: #1A2029;

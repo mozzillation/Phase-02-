@@ -3,6 +3,15 @@
     position: relative;
 
 
+
+    #legend {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+
+
     #lightbox {
         position: absolute;
         top: 0;
@@ -69,9 +78,9 @@
 
 
     &-viz {
-
-
         transition: transform @ease;
+
+
 
         &.zoom-out {
             #bg {
@@ -105,9 +114,7 @@
 
             }
 
-            #legend {
-                opacity: 0;
-            }
+
 
 
         }
@@ -120,7 +127,7 @@
 
 
         #images {
-            opacity: 0.2;
+            opacity: 1;
             transition: opacity @ease;
 
         }
@@ -130,6 +137,7 @@
 
         #legend {
             transition: opacity @ease;
+            opacity: 0;
         }
 
         #bg {
