@@ -10,9 +10,10 @@ Instead, for what concerns the orientation, the results were highly pointing in 
 
 
 ### Protocol
+We searched for both queries on google.com in incognito mode to be sure that the results were generated using anonymous browsing and with no nationality to influence the outcome. We extracted the first 100 results for each query and excluded the e-commerce ones, keeping only 50 results for the visualization. Then we manually clustered the typology of the sources and we identified the gender-based hate orientation.
+
 ![example of protocol]({{'/assets/images/protocols/protocol-02.svg' | relative_url }})
 
-We searched for both queries on google.com in incognito mode to be sure that the results were generated using anonymous browsing and with no nationality to influence the outcome. We extracted the first 100 results for each query and excluded the e-commerce ones, keeping only 50 results for the visualization. Then we manually clustered the typology of the sources and we identified the gender-based hate orientation.
 
 ### Data
 ##### Data Source: [Google Search](https://www.google.com)

@@ -1,6 +1,6 @@
 ---
 title: Glossary?
-cover: /assets/images/covers/viz04.jpg
+cover: /assets/images/covers/viz08.jpg
 number: 8
 ---
 ### Description
@@ -8,6 +8,7 @@ number: 8
 
 
 ### Protocol
+![example of protocol]({{'/assets/images/protocols/protocol-08.svg' | relative_url }})
 
 
 ### Data

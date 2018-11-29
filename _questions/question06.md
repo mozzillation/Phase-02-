@@ -1,5 +1,5 @@
 ---
-title: Which is the reaction of the users to videos about feminism?
+title: Which is the orientation of the most viewed videos about feminism and which is the reaction of the users?
 cover: /assets/images/covers/viz04.jpg
 number: 6
 ---
@@ -8,6 +8,7 @@ number: 6
 
 
 ### Protocol
+![example of protocol]({{'/assets/images/protocols/protocol-06.svg' | relative_url }})
 
 
 ### Data
