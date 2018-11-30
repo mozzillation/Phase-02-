@@ -208,6 +208,43 @@ $(document).ready(function () {
 
 
 
+    $('#glossary-viz2 #topics li').hoverIntent(function (evt) {
+
+        $this = $(this);
+
+        var description = $(this).data('description');
+
+        $('#glossary-viz2 .popup').toggleClass('is-visible');
+        $('#glossary-viz2 .popup').find('span').html(description);
+
+    })
+
+
+
+    $('#glossary-viz2 #topics li').hoverIntent(function () {
+        var $this = $(this);
+
+        var description = $(this).data('description');
+
+        $('#glossary-viz2 .popup').addClass('is-visible');
+        $('#glossary-viz2 .popup').find('span').html(description);
+
+        $('#glossary-viz2').on('mousemove', function (evt) {
+            var x = evt.pageX - $(this).offset().left + 10;
+            var y = evt.pageY - $(this).offset().top + +20;
+
+            $('#glossary-viz2 .popup').css({
+                top: y,
+                left: x
+            });
+        })
+
+    }, function () {
+        $('#glossary-viz2 .popup').removeClass('is-visible');
+    });
+
+
+
 
 
 

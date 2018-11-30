@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     function callback() {
 
-        $('#reddit-viz #subreddit > g').hover(function () {
+        $('#reddit-viz #subreddit > g').hoverIntent(function () {
 
             $this = $(this);
 

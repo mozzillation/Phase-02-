@@ -143,22 +143,6 @@ $(document).ready(function () {
                 window.open(url, '_blank');
             })
 
-
-
-
-
-            //                var parent = $this.parent().attr('id');
-            //                var source = '#tick #' + $this.data('source');
-            //                var title = $(this).data('title');
-            //
-            //                $('#query1 > g, #query2 > g').not($this).addClass('is-disabled');
-            //                var orientation = $this.data('orientation');
-            //                var orientation2 = '#tick #' + orientation;
-
-            //                $('[id^="orientation"]').not('#orientation_' + parent + '_' + orientation).addClass('is-disabled');
-            //                $('#tick > g').not(source + ', ' + orientation2).addClass('is-disabled');
-            //                $('#queries .popup').addClass('is-visible').find("span").html(title);
-
         });
 
 

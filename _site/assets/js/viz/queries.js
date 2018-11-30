@@ -80,7 +80,7 @@ $(document).ready(function () {
 
         // HOVER ANIMATION
 
-        $('svg #query1 > g, svg #query2 > g').hover(function () {
+        $('svg #query1 > g, svg #query2 > g').hoverIntent(function () {
                 var $this = $(this);
                 var parent = $this.parent().attr('id');
                 var source = '#tick #' + $this.data('source');

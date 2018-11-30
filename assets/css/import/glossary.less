@@ -58,6 +58,7 @@
 
     &-viz2 {
         padding: 100px 2rem;
+        position: relative;
 
         display: flex;
         align-content: center;
@@ -66,6 +67,35 @@
         @media @mobile {
             flex-direction: column;
         }
+
+
+        .popup {
+            max-width: 200px;
+            opacity: 0;
+            padding: 5px;
+            background: @dark;
+            color: @white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 10px;
+            line-height: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: opacity @ease;
+            z-index: 100000;
+
+            &.is-visible {
+                opacity: 1;
+            }
+
+            div {
+                opacity: 0.3;
+                font-weight: normal;
+            }
+
+        }
+
 
         #topics {
             padding-right: 50px;

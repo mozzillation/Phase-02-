@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     function callback() {
 
-        $('#news-viz svg #flux > g').hover(function () {
+        $('#news-viz svg #flux > g').hoverIntent(function () {
             $this = $(this);
 
             $('#news-viz svg #flux g').not($this).addClass('is-hidden');
@@ -130,7 +130,7 @@ $(document).ready(function () {
 
 
 
-            $('image').hover(function () {
+            $('image').hoverIntent(function () {
                 var img = $(this).attr('href');
 
                 $('#news .popup').css({
