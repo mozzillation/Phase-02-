@@ -12,7 +12,7 @@
             <ul class="index__list">
                 {% for question in site.questions %}
                 <li class="index__item">
-                    <a href="{{ question.url | relative_url }}"> {{ question.title }} </a>
+                    <a href="{{ question.url | relative_url }}"> {{question.number}}. {{ question.title }} </a>
                 </li>
                 {% endfor %}
             </ul>

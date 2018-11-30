@@ -16,12 +16,38 @@ $(document).ready(function () {
         var svg = new XMLSerializer().serializeToString(data.documentElement);
         $('#glossary-viz2 #viz #legend').prepend(svg);
 
-        glossary();
+
 
     });
 
 
     function glossary() {
+
+
+        $('#tagcloud span').each(function (i, el) {
+
+            var count = $(this).data('count');
+            var size = map(count, 0, 2164, 14, 72);
+
+            console.log(size);
+
+            $(this).css({
+                'font-size': size + 'px'
+            }).append("<sup> " + count + "</sup>")
+
+
+
+
+
+        })
+
+
+
+
+
+
+
+
 
         $.getJSON("./assets/js/viz/data/glossary/glossary.json", function (data) {
 
@@ -145,7 +171,7 @@ $(document).ready(function () {
 
 
                 // ——————
-                $('svg #words > g').click(function () {
+                $('svg #words > g, #tagcloud span').click(function () {
 
                     $('#overlay, #terms').addClass('is-visible');
                     var target = $(this).data('word');

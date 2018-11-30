@@ -6,8 +6,7 @@ number: 1
 ### Description
 Going back to the [first phase of research](https://densitydesign.github.io/teaching-dd14/es01/group01/), it became necessary to examine the semantic spheres related to sexism in order to explore new areas of daily misogyny. For this research we used Wikipedia and Seealsology to see the different links between the pages related to sexism. From the analysis it was possible to insert each page into five macro-categories: feminism, gender studies, discrimination, women’s history and LGBT studies.
 
-![example of secondary visualization]({{'/assets/images/protocols/howto-01.svg' | relative_url }})
-
+<!--![example of secondary visualization]({{'/assets/images/protocols/howto-01.svg' | relative_url }})-->
 In the visualization each dot stands for a Wikipedia page while the distance value represents the degrees of separation from the initial seed. The visualization shows that the main category is feminism followed by gender studies and discrimination, so in the next phases we continued the project towards this topics.
 
 ### Protocol

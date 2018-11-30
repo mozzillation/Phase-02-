@@ -138,7 +138,19 @@ $(document).ready(function () {
 
             var axis2Selection = d3.select(".xAxis").classed("xAxis", true);
 
-            axis2Selection.selectAll('.tick text')
+
+            axis2Selection
+                .selectAll('.tick')
+                .attr('class', function (d, i) {
+                    if (d == 0) {
+                        return "seed"
+                    } else {
+                        return "tick"
+                    }
+                })
+
+            axis2Selection
+                .selectAll('.tick text')
                 .text(function (d) {
                     console.log(d);
                     switch (d) {
@@ -155,7 +167,7 @@ $(document).ready(function () {
                             return "Distance 3";
                             break;
                     }
-                }).attr('class', 'buh');
+                });
 
             // Draw circles
 
@@ -181,12 +193,22 @@ $(document).ready(function () {
                 })
                 .attr("fill", function (d) {
                     if (d.seed) {
-                        return "#ffffff";
+                        return "#FF3502";
                     } else {
                         return "#ffffff";
                     }
 
                 })
+                .attr('class', function (d) {
+
+                    if (d.name == "Sexism") {
+                        return "circ seedCirc"
+                    } else {
+                        return "circ"
+                    }
+
+                });
+
             //            .on("mouseout", handleMouseOut);        // .attr("stroke", "rgba(0,0,0,.2)")
             // .attr("stroke-width", 1)
 
@@ -220,17 +242,23 @@ $(document).ready(function () {
             // CLICK "CATEGORY" BUTTON
 
             $('#category').click(function () {
-
+                $('#seealsology').addClass('category');
                 $('#seealsology button').toggleClass('active');
-                $('.xAxis').toggleClass('is-visible');
-                $('.radius').toggleClass('is-hidden');
+                $('.xAxis').addClass('is-visible');
+                $('.radius').addClass('is-hidden');
 
                 console.log("CARICA CATEGORIE");
 
                 svg
                     .attr('height', height)
                     .selectAll('.circ').attr("fill", function (d) {
-                        return colors(d.ID - 1);
+
+                        if (d.name == "Sexism") {
+                            return '#FF3502'
+                        } else {
+
+                            return colors(d.ID - 1);
+                        }
                     });
 
                 var axisSelection = d3.select(".yAxis").classed("yAxis", true);
@@ -260,7 +288,12 @@ $(document).ready(function () {
                     })
 
                 simulation.force('y', d3.forceY(function (d) {
-                        return y2(d.ID);
+                        if (d.name == "Sexism") {
+                            return height / 2
+                        } else {
+                            return y2(d.ID);
+                        }
+
                     }).strength(0.05))
                     .force('x', d3.forceX(function (d) {
                         return x(d.distance)
@@ -276,8 +309,9 @@ $(document).ready(function () {
 
             $('#reset').click(function () {
                 console.log("RESETTA");
-                $('.xAxis').toggleClass('is-visible');
-                $('.radius').toggleClass('is-hidden');
+                $('#seealsology').removeClass('category');
+                $('.xAxis').removeClass('is-visible');
+                $('.radius').removeClass('is-hidden');
                 $('#seealsology button').toggleClass('active');
 
                 d3.select(".yAxis").transition(t).style("opacity", 0);
@@ -289,7 +323,13 @@ $(document).ready(function () {
                     }).strength(0.1)).restart()
 
                 svg.selectAll('.circ').attr("fill", function (d) {
-                    return "#FFFFFF";
+
+                    if (d.name == "Sexism") {
+                        return '#FF3502'
+                    } else {
+
+                        return '#FFFFFF'
+                    }
                 });
 
             })

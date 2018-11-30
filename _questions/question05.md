@@ -1,5 +1,5 @@
 ---
-title: Who are the main actors sensibilizing people about feminism?
+title: Who are the main actors that talk about feminism?
 cover: /assets/images/covers/viz05.jpg
 number: 5
 ---

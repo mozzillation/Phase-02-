@@ -1,5 +1,5 @@
 ---
-title: Glossary?
+title: Which is the language used in the MGTOW forums and how much is it spread by the users?
 cover: /assets/images/covers/viz08.jpg
 number: 8
 ---

@@ -1,5 +1,5 @@
 ---
-title: Which are the most popular antifeminist platforms and which are their topics?
+title: Which are the most popular antifeminist networks and which are their topics?
 cover: /assets/images/covers/viz04.jpg
 number: 7
 ---

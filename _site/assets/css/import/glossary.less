@@ -1,7 +1,59 @@
 #glossary {
     background: @dark;
 
-    &-viz {}
+    .header {
+        color: @white;
+        padding: 50px 0 25px 0;
+        display: flex;
+        align-content: space-between;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid @white;
+
+        h1 {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: normal;
+            padding-top: 10px;
+        }
+    }
+
+    &-viz {
+
+        #tagcloud {
+
+            padding: 25px 0;
+            color: @white;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            align-items: baseline;
+            justify-content: flex-start;
+
+
+            span {
+                cursor: pointer;
+                margin-right: 40px;
+                display: block;
+                margin-bottom: 15px;
+                color: @primary;
+                transition: color @ease;
+
+                &:hover {
+                    color: #4A74FF;
+                }
+
+                sup {
+                    font-size: 12px;
+                    color: @light;
+                }
+            }
+
+        }
+
+
+    }
+
 
 
     &-viz2 {

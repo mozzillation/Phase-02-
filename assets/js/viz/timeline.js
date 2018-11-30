@@ -86,7 +86,7 @@ $(document).ready(function () {
 
         // ————————————————————
 
-        $.get("./assets/js/viz/data/timeline2.svg", function (data) {
+        $.get("./assets/js/viz/data/timeline2-new.svg", function (data) {
             var svg = new XMLSerializer().serializeToString(data.documentElement);
             $('#timeline-viz2').append(svg);
             callback2();
