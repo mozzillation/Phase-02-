@@ -1,5 +1,5 @@
 ---
-title: Who are the main actors that talk about feminism?
+title: Who are the main actors that talk about feminism and which are the themes they treat?
 cover: /assets/images/covers/viz05.jpg
 number: 5
 ---

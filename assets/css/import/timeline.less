@@ -49,8 +49,11 @@
 
         svg {
             opacity: 1;
-
             transition: opacity @ease;
+
+            g {
+                transition: opacity @ease;
+            }
 
 
 
@@ -103,11 +106,11 @@
             }
 
             .st7 {
-                fill: url(#SVGID_4_);
+                fill: url(#SVGID_1_);
             }
 
             .st8 {
-                fill: url(#SVGID_5_);
+                fill: url(#SVGID_2_);
             }
 
             .st9 {
@@ -135,13 +138,14 @@
             }
 
             .st13 {
-                fill: url(#SVGID_6_);
+                fill: url(#SVGID_3_);
                 fill-opacity: 0.5;
             }
 
             .st14 {
                 opacity: 0.1;
                 fill: #30D840;
+                enable-background: new;
             }
 
             .st15 {
@@ -151,6 +155,7 @@
             .st16 {
                 opacity: 0.1;
                 fill: #FF7B22;
+                enable-background: new;
             }
 
             .st17 {
@@ -160,6 +165,7 @@
             .st18 {
                 opacity: 0.1;
                 fill: #FFAC8D;
+                enable-background: new;
             }
 
             .st19 {
@@ -180,6 +186,7 @@
             .st22 {
                 opacity: 0.1;
                 fill: #00F3FF;
+                enable-background: new;
             }
 
             .st23 {
@@ -189,6 +196,7 @@
             .st24 {
                 opacity: 0.1;
                 fill: #F2D51E;
+                enable-background: new;
             }
 
             .st25 {
@@ -198,18 +206,19 @@
             .st26 {
                 opacity: 0.1;
                 fill: #9471FF;
+                enable-background: new;
             }
 
             .st27 {
                 fill: #9471FF;
             }
 
-            & > g {
+
+            #box > g {
                 transition: opacity @ease;
 
-                &[data-id="category"] {
-                    cursor: pointer;
-                }
+                cursor: pointer;
+
 
 
                 &.is-hidden {

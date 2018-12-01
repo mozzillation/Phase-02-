@@ -11,28 +11,28 @@ $(document).ready(function () {
         function callback() {
 
 
-            $('#timeline-viz svg > g[data-id="category"]').hover(function () {
+            $('#timeline-viz svg #box > g').hover(function () {
                 $this = $(this);
                 if ($this.hasClass('is-disabled')) {
                     $this.removeClass('is-disabled').attr('data-disabled', 1);
                 }
 
-                $('#timeline-viz svg g[data-id="category"]').not($this).addClass('is-hidden');
+                $('#timeline-viz svg #box > g').not($this).addClass('is-hidden');
             }, function () {
-                $('#timeline-viz svg g[data-id="category"]').removeClass('is-hidden ');
+                $('#timeline-viz svg #box > g').removeClass('is-hidden ');
 
-                $disabled = $('#timeline-viz svg g[data-disabled="1"]');
+                $disabled = $('#timeline-viz svg #box > g[data-disabled="1"]');
                 $disabled.addClass('is-disabled').removeAttr('data-disabled');
 
             })
 
 
-            $('#timeline-viz svg > g[data-id="category"]').click(function () {
+            $('#timeline-viz svg #box > g').click(function () {
 
 
                 if ($(this).hasClass('is-active')) {
 
-                    $('#timeline-viz svg g[data-id="category"]').removeClass('is-hidden is-disabled is-active')
+                    $('#timeline-viz svg #box > g').removeClass('is-hidden is-disabled is-active')
                     $('.events').slideUp();
 
                 } else {
@@ -43,7 +43,7 @@ $(document).ready(function () {
                     var ID = '#' + $this.attr('id') + '.events';
                     console.log(ID);
 
-                    $('#timeline-viz svg g[data-id="category"]').addClass('is-disabled').removeAttr('data-disabled');
+                    $('#timeline-viz svg #box > g').addClass('is-disabled').removeAttr('data-disabled');
                     $this.removeClass('is-hidden is-disabled is-active legend').addClass('is-active');
 
                     $('.events').slideUp();
@@ -52,7 +52,7 @@ $(document).ready(function () {
                 }
 
 
-                if ($(this).data('viz') == 2) {
+                if ($(this).attr('id') == "activities") {
 
                     $('#timeline-viz svg').addClass('is-hidden');
                     $('#viz2').addClass('is-visible');
@@ -67,7 +67,7 @@ $(document).ready(function () {
 
             $('.back h1').click(function () {
 
-                $('#timeline-viz svg g[data-id="category"]').removeClass('is-hidden is-disabled is-active')
+                $('#timeline-viz svg g').removeClass('is-hidden is-disabled is-active')
                 $('#timeline-viz svg').removeClass('is-hidden');
                 $('#viz2').removeClass('is-visible');
 
