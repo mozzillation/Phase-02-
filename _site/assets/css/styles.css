@@ -196,6 +196,8 @@ main.content { margin: 5.5rem auto 5rem; }
 
 .question__content img { max-width: 100%; }
 
+.question__content a { border-bottom: 1px dotted var(--color-main); color: var(--color-main); }
+
 footer { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: 3fr 3fr 2fr; margin: 0; padding: 3rem calc((100% - var(--container-width)) / 2); background-color: var(--color-main); color: var(--color-light); }
 
 .footer__image { -o-object-fit: contain; object-fit: contain; grid-row: 3; padding-top: 1.2rem; }

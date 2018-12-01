@@ -4,6 +4,7 @@ cover: /assets/images/covers/viz05.jpg
 number: 5
 ---
 ### Description
+![example of protocol]({{'/assets/images/protocols/platforms.svg' | relative_url }})
 
 
 
