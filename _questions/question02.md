@@ -17,5 +17,5 @@ We searched for both queries on google.com in incognito mode to be sure that the
 
 ### Data
 ##### Data Source: [Google Search](https://www.google.com)
-##### Timestamp: 11/11/2018
-##### [View Data (93KB)]({{ '/dataset/viz01-gephi.xlsx' | relative_url }})
+##### Timestamp: 07/11/2018
+##### [View Data (35KB)]({{ '/dataset/viz02.xlsx' | relative_url }})

@@ -20,7 +20,7 @@ $(document).ready(function () {
             .attr('height', height)
 
         let colors = d3.scaleOrdinal()
-            .range(["#30d840", "#f2d51e", "#9d77fc", "#4a74ff", "#ff7900", "#999"]);
+            .range(["#f2d51e", "#30d840", "#9d77fc", "#4a74ff", "#ff7900", "#999"]);
         //        .domain(["Feminism", "Gender Studies", "Discrimination", "Women's History", "LGBT Studies"])
 
 

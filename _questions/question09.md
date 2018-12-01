@@ -10,6 +10,6 @@ number: 9
 
 
 ### Data
-##### Data Source: [Google News](https://news.google.com/)
-##### Timestamp: 11/11/2018
-##### [View Data (6MB)]({{ '/dataset/viz04.zip' | relative_url }})
+##### Data Source: [The AntiFeminist Bank FB Page](https://www.facebook.com/antifeministbank/)
+##### Timestamp: 21/11/2018
+##### [View Data (20MB)]({{ '/dataset/viz04.zip' | relative_url }})

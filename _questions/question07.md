@@ -1,9 +1,10 @@
 ---
-title: Which are the most popular antifeminist networks and which are their topics?
-cover: /assets/images/covers/viz04.jpg
+title: Which are the most popular antifeminist communities and which are their topics?
+cover: /assets/images/covers/viz07.jpg
 number: 7
 ---
 ### Description
+![example of protocol]({{'/assets/images/protocols/manosphere-02.svg' | relative_url }})
 
 
 
@@ -12,6 +13,6 @@ number: 7
 
 
 ### Data
-##### Data Source: [Google News](https://news.google.com/)
+##### Data Source: [Reddit](https://www.reddit.com/)
 ##### Timestamp: 11/11/2018
-##### [View Data (6MB)]({{ '/dataset/viz04.zip' | relative_url }})
+##### [View Data (31KB)]({{ '/dataset/viz07.xlsx' | relative_url }})

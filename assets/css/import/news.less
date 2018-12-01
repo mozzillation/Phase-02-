@@ -1,22 +1,58 @@
 #news {
     background-color: @dark;
     position: relative;
+    padding: 0 25px 25px 20px;
+
+    .header {
+        color: @white;
+        padding: 50px 0 25px 0;
+        display: flex;
+        align-content: space-between;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid @white;
+        margin-bottom: 50px;
+
+        h1 {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: normal;
+            padding-top: 10px;
+        }
+    }
 
     .popup {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100px;
-        height: 100px;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
         background: @dark;
-        box-shadow: 0px 0px 20px @dark;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        background: fade(@light, 60);
+
         opacity: 0;
         transition: opacity @ease;
+        pointer-events: none;
+
 
         &.is-visible {
 
             opacity: 1;
+            pointer-events: all;
 
+        }
+
+        svg {
+            display: block;
+            width: auto;
+            height: 70vh;
+            box-shadow: 0px 0px 20px @dark;
         }
     }
 
@@ -24,14 +60,30 @@
 
         svg {
 
+
+            #images {
+                g {
+                    transition: opacity @ease;
+                }
+
+                & > g {
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+
+            }
+
             image {
                 z-index: 10000;
             }
 
 
-//            .st2 {
-//                opacity: 0 !important;
-//            }
+            //            .st2 {
+            //                opacity: 0 !important;
+            //            }
 
 
 
