@@ -16,7 +16,6 @@ $(document).ready(function () {
 
             $('#speaker-viz svg #video').find('circle').each(function (i, el) {
 
-                console.log(el);
 
                 if (i < leng) {
                     var remap = i;
@@ -109,10 +108,10 @@ $(document).ready(function () {
                 orientation = "antifeminist"
 
             } else {
-                orientation = "pro feminist"
+                orientation = "pro feminism"
             }
 
-            $('#speaker .orientation').toggleClass('is-visible').removeClass("pro feminist antifeminist").addClass(orientation).html(orientation);
+            $('#speaker .orientation').toggleClass('is-visible').removeClass("pro feminism antifeminist").addClass(orientation).html(orientation);
 
 
             $('#speaker .reactions').toggleClass('is-visible');
@@ -172,11 +171,73 @@ $(document).ready(function () {
 
 
 
+    }
+
+
+    // ——————
+
+
+    //    var videoEmma = getId("https://www.youtube.com/watch?v=p-iFl4qhBsE");
+    //    var iframeEmma = '<iframe id="emma" height="315" src="//www.youtube.com/embed/' + videoEmma + '" frameborder="0" allowfullscreen></iframe>';
+    //
+    //    var videoOprah = getId("https://www.youtube.com/watch?v=fN5HV79_8B8");
+    //    var iframeOprah = '<iframe height="315" src="//www.youtube.com/embed/' + videoOprah + '" frameborder="0" allowfullscreen></iframe>';
+    //
+    //    var videoMichelle = getId("https://www.youtube.com/watch?v=SJ45VLgbe_E");
+    //    var iframeMichelle = '<iframe height="315" src="//www.youtube.com/embed/' + videoMichelle + '" frameborder="0" allowfullscreen></iframe>';
+    //
+    //    $('.row_video[data-actor="Emma Watson"]').html(iframeEmma);
+    //    $('.row_video[data-actor="Oprah Winfrey"]').html(iframeOprah);
+    //    $('.row_video[data-actor="Michelle Obama"]').html(iframeMichelle);
+    //
+    //    ytplayer = document.getElementById("emma");
+    //    var yourVariable = ytplayer.getCurrentTime() || 0;
+    //    console.log(yourVariable);
 
 
 
 
 
+
+
+    $.get("./assets/js/viz/data/speaker/second/emma-topic.svg", function (data) {
+
+
+
+        var svg = new XMLSerializer().serializeToString(data.documentElement);
+        $('#emma').append(svg);
+
+
+    });
+
+
+    $.get("./assets/js/viz/data/speaker/second/oprah-topic.svg", function (data) {
+        var svg = new XMLSerializer().serializeToString(data.documentElement);
+        $('#oprah').append(svg);
+
+    });
+
+    $.get("./assets/js/viz/data/speaker/second/michelle-topic.svg", function (data) {
+        var svg = new XMLSerializer().serializeToString(data.documentElement);
+        $('#michelle').append(svg);
+
+    });
+
+
+
+
+
+
+
+    function getId(url) {
+        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        var match = url.match(regExp);
+
+        if (match && match[2].length == 11) {
+            return match[2];
+        } else {
+            return 'error';
+        }
     }
 
 

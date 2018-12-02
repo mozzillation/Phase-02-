@@ -16,6 +16,21 @@
 @import 'import/meme';
 
 
+.intro {
+    column-count: 2;
+
+    p {
+        &:first-child {
+            margin-block-start: 0em;
+        }
+    }
+
+    @media @mobile {
+        column-count: 1;
+    }
+
+}
+
 #research {
     width: 100%;
     display: flex;
