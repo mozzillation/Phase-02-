@@ -105,13 +105,13 @@ $(document).ready(function () {
 
             if (name == "Milo Yiannopoulus") {
 
-                orientation = "antifeminist"
+                orientation = "antifeminism"
 
             } else {
                 orientation = "pro feminism"
             }
 
-            $('#speaker .orientation').toggleClass('is-visible').removeClass("pro feminism antifeminist").addClass(orientation).html(orientation);
+            $('#speaker .orientation').toggleClass('is-visible').removeClass("pro feminism antifeminism").addClass(orientation).html(orientation);
 
 
             $('#speaker .reactions').toggleClass('is-visible');
@@ -174,6 +174,36 @@ $(document).ready(function () {
     }
 
 
+
+    $('.svg svg g > g').hoverIntent(function () {
+        var $this = $(this);
+
+        var count = $this.data('count');
+
+        console.log(count);
+
+
+        $('#speaker .popup').toggleClass('is-visible');
+        $('#speaker .popup span').html(title);
+
+        $('#speaker').on('mousemove', function (evt) {
+            var x = evt.pageX - $(this).offset().left + 10;
+            var y = evt.pageY - $(this).offset().top + +20;
+
+            $('#speaker .popup').css({
+                top: y,
+                left: x
+            });
+        })
+
+
+        $(this).click(function () {
+            window.open(url, '_blank');
+        })
+
+    });
+
+
     // ——————
 
 
@@ -200,45 +230,82 @@ $(document).ready(function () {
 
 
 
-    $.get("./assets/js/viz/data/speaker/second/emma-topic.svg", function (data) {
+    //    $.get("./assets/js/viz/data/speaker/second/emma-topic.svg", function (data) {
+    //
+    //
+    //
+    //        var svg = new XMLSerializer().serializeToString(data.documentElement);
+    //        $('#emma').append(svg);
+    //
+    //
+    //    });
+    //
+    //
+    //    $.get("./assets/js/viz/data/speaker/second/oprah-topic.svg", function (data) {
+    //        var svg = new XMLSerializer().serializeToString(data.documentElement);
+    //        $('#oprah').append(svg);
+    //
+    //    });
+    //
+    //    $.get("./assets/js/viz/data/speaker/second/michelle-topic.svg", function (data) {
+    //        var svg = new XMLSerializer().serializeToString(data.documentElement);
+    //        $('#michelle').append(svg);
+    //
+    //    });
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    function getId(url) {
+    //        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    //        var match = url.match(regExp);
+    //
+    //        if (match && match[2].length == 11) {
+    //            return match[2];
+    //        } else {
+    //            return 'error';
+    //        }
+    //    }
 
 
+    $.get("./assets/js/viz/data/speaker/second/second-new.svg", function (data) {
 
         var svg = new XMLSerializer().serializeToString(data.documentElement);
-        $('#emma').append(svg);
+        $('.speaker3-viz .svg').append(svg);
+
+        $('.speaker3-viz .svg svg g > g').hoverIntent(function () {
+            var $this = $(this);
+
+            var count = $this.data('count');
+
+            console.log(count);
+
+
+            $('.counter').addClass('is-visible');
+            $('.counter').html("~" + count + " words");
+
+            $('#speaker3').on('mousemove', function (evt) {
+                var x = evt.pageX - $(this).offset().left + 10;
+                var y = evt.pageY - $(this).offset().top + +20;
+
+                $('.counter').css({
+                    top: y,
+                    left: x
+                });
+            })
+
+        }, function () {
+            $('.counter').removeClass('is-visible');
+
+        });
+
 
 
     });
 
-
-    $.get("./assets/js/viz/data/speaker/second/oprah-topic.svg", function (data) {
-        var svg = new XMLSerializer().serializeToString(data.documentElement);
-        $('#oprah').append(svg);
-
-    });
-
-    $.get("./assets/js/viz/data/speaker/second/michelle-topic.svg", function (data) {
-        var svg = new XMLSerializer().serializeToString(data.documentElement);
-        $('#michelle').append(svg);
-
-    });
-
-
-
-
-
-
-
-    function getId(url) {
-        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-        var match = url.match(regExp);
-
-        if (match && match[2].length == 11) {
-            return match[2];
-        } else {
-            return 'error';
-        }
-    }
 
 
 

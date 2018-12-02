@@ -42,6 +42,53 @@
 </div>
 
 
+
+<div id="speaker3">
+
+    <div class="header">
+        <div class="container">
+
+            <h1>THEMES OF THE MOST INFLUENT ACTORS' SPEECHES</h1>
+
+            <img src="./assets/images/protocols/howto-05.svg">
+
+
+        </div>
+
+    </div>
+
+
+    <div class="speaker3-viz">
+
+        <div class="counter"></div>
+
+        <div class="small">
+            <div class="author"><img src="./assets/js/viz/data/speaker/second/emma.svg"></div>
+            <div class="author"><img src="./assets/js/viz/data/speaker/second/oprah.svg"></div>
+            <div class="author"><img src="./assets/js/viz/data/speaker/second/michelle.svg"></div>
+        </div>
+
+        <div class="videos">
+            <div id="playerEmma"></div>
+            <div id="playerOprah"></div>
+            <div id="playerMichelle"></div>
+        </div>
+
+
+        <div class="svg">
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
+
+<!--
 <div id="speaker2">
     <div class="header">
         <div class="container">
@@ -119,8 +166,9 @@
     </div>
 </div>
 
-<script src="https://www.youtube.com/iframe_api"></script>
+-->
 
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
     var playerEmma;
     var playerOprah;
@@ -177,54 +225,54 @@
 
         if (time > 0) {
 
-            $('#emma svg > g').addClass("hide");
+            $('#emma > g').addClass("hide");
         }
 
         if (time > 0 && time < 150) {
-            $('#emma svg > g:nth-child(1)').addClass('active');
+            $('#emma > g:nth-child(1)').addClass('active');
 
         } else if (time > 150 && time < 190) {
-            $('#emma svg > g').removeClass('active');
-            $('#emma svg > g:nth-child(2)').addClass('active');
+            $('#emma > g').removeClass('active');
+            $('#emma > g:nth-child(2)').addClass('active');
 
         } else if (time > 192 && time < 215) {
-            $('#emma svg > g').removeClass('active');
-            $('#emma svg > g:nth-child(3)').addClass('active');
+            $('#emma > g').removeClass('active');
+            $('#emma > g:nth-child(3)').addClass('active');
 
         } else if (time > 216 && time < 283) {
 
-            $('#emma svg > g').removeClass('active');
-            $('#emma svg > g:nth-child(4)').addClass('active');
+            $('#emma > g').removeClass('active');
+            $('#emma > g:nth-child(4)').addClass('active');
         } else if (time > 284 && time < 327) {
 
-            $('#emma svg > g').removeClass('active');
-            $('#emma svg > g:nth-child(5)').addClass('active');
+            $('#emma > g').removeClass('active');
+            $('#emma > g:nth-child(5)').addClass('active');
 
         } else if (time > 328 && time < 355) {
-            $('#emma svg > g').removeClass('active');
-            $('#emma svg > g:nth-child(6)').addClass('active');
+            $('#emma > g').removeClass('active');
+            $('#emma > g:nth-child(6)').addClass('active');
 
 
         } else if (time > 356 && time < 420) {
 
-            $('#emma svg > g').removeClass('active');
-            $('#emma svg > g:nth-child(7)').addClass('active');
+            $('#emma > g').removeClass('active');
+            $('#emma > g:nth-child(7)').addClass('active');
 
         } else if (time > 421 && time < 481) {
-            $('#emma svg > g').removeClass('active');
-            $('#emma svg > g:nth-child(8)').addClass('active');
+            $('#emma > g').removeClass('active');
+            $('#emma > g:nth-child(8)').addClass('active');
 
         } else if (time > 482 && time < 634) {
-            $('#emma svg > g').removeClass('active');
-            $('#emma svg > g:nth-child(9)').addClass('active');
+            $('#emma  > g').removeClass('active');
+            $('#emma  > g:nth-child(9)').addClass('active');
 
         } else if (time > 635 && time < 790) {
-            $('#emma svg > g').removeClass('active');
-            $('#emma svg > g:nth-child(10)').addClass('active');
+            $('#emma  > g').removeClass('active');
+            $('#emma  > g:nth-child(10)').addClass('active');
             // $('#duration').text(formatTime(playerEmma.getDuration()));   
         } else {
-            $('#emma svg > g').removeClass('active');
-            $('#emma svg > g').removeClass("hide");
+            $('#emma  > g').removeClass('active');
+            $('#emma  > g').removeClass("hide");
         }
 
 
@@ -235,38 +283,38 @@
 
         if (time2 > 0) {
 
-            $('#oprah svg > g').addClass("hide");
+            $('#oprah > g').addClass("hide");
         };
 
         if (time2 > 0 && time2 < 156) {
-            $('#oprah svg > g:nth-child(1)').addClass('active');
-        } else if (time2 > 157 && time2 < 191) {
-            $('#oprah svg > g').removeClass('active');
-            $('#oprah svg > g:nth-child(2)').addClass('active');
+            $('#oprah > g:nth-child(1)').addClass('active');
+        } else if (time2 > 156 && time2 < 191) {
+            $('#oprah > g').removeClass('active');
+            $('#oprah > g:nth-child(2)').addClass('active');
 
         } else if (time2 > 192 && time2 < 321) {
-            $('#oprah svg > g').removeClass('active');
-            $('#oprah svg > g:nth-child(3)').addClass('active');
+            $('#oprah > g').removeClass('active');
+            $('#oprah > g:nth-child(3)').addClass('active');
 
         } else if (time2 > 322 && time2 < 390) {
-            $('#oprah svg > g').removeClass('active');
-            $('#oprah svg > g:nth-child(4)').addClass('active');
+            $('#oprah > g').removeClass('active');
+            $('#oprah > g:nth-child(4)').addClass('active');
 
         } else if (time2 > 391 && time2 < 464) {
-            $('#oprah svg > g').removeClass('active');
-            $('#oprah svg > g:nth-child(5)').addClass('active');
+            $('#oprah > g').removeClass('active');
+            $('#oprah > g:nth-child(5)').addClass('active');
 
         } else if (time2 > 465 && time2 < 490) {
-            $('#oprah svg > g').removeClass('active');
-            $('#oprah svg > g:nth-child(6)').addClass('active');
+            $('#oprah > g').removeClass('active');
+            $('#oprah > g:nth-child(6)').addClass('active');
 
         } else if (time2 > 491 && time2 < 553) {
-            $('#oprah svg > g').removeClass('active');
-            $('#oprah svg > g:nth-child(7)').addClass('active');
+            $('#oprah > g').removeClass('active');
+            $('#oprah > g:nth-child(7)').addClass('active');
         } else {
 
-            $('#oprah svg > g').removeClass('active');
-            $('#oprah svg > g').removeClass("hide");
+            $('#oprah > g').removeClass('active');
+            $('#oprah > g').removeClass("hide");
 
         }
 
@@ -276,70 +324,70 @@
 
         if (time3 > 0) {
 
-            $('#michelle svg > g').addClass("hide");
+            $('#michelle > g').addClass("hide");
         };
 
 
         if (time3 > 0 && time3 < 158) {
-            $('#michelle svg > g:nth-child(1)').addClass('active');
+            $('#michelle > g:nth-child(1)').addClass('active');
 
 
         } else if (time3 > 159 && time3 < 227) {
 
 
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g:nth-child(2)').addClass('active');
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g:nth-child(2)').addClass('active');
         } else if (time3 > 228 && time3 < 306) {
 
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g:nth-child(3)').addClass('active');
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g:nth-child(3)').addClass('active');
 
         } else if (time3 > 307 && time3 < 460) {
 
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g:nth-child(4)').addClass('active');
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g:nth-child(4)').addClass('active');
 
         } else if (time3 > 461 && time3 < 675) {
 
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g:nth-child(5)').addClass('active');
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g:nth-child(5)').addClass('active');
 
         } else if (time3 > 676 && time3 < 808) {
 
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g:nth-child(6)').addClass('active');
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g:nth-child(6)').addClass('active');
 
         } else if (time3 > 809 && time3 < 1105) {
 
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g:nth-child(7)').addClass('active');
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g:nth-child(7)').addClass('active');
 
         } else if (time3 > 1106 && time3 < 1188) {
 
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g:nth-child(8)').addClass('active');
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g:nth-child(8)').addClass('active');
 
         } else if (time3 > 1189 && time3 < 1238) {
 
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g:nth-child(9)').addClass('active');
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g:nth-child(9)').addClass('active');
         } else if (time3 > 1239 && time3 < 1458) {
 
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g:nth-child(10)').addClass('active');
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g:nth-child(10)').addClass('active');
 
         } else if (time3 > 1459 && time3 < 1600) {
 
 
 
 
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g:nth-child(11)').addClass('active');
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g:nth-child(11)').addClass('active');
 
 
         } else {
-            $('#michelle svg > g').removeClass('active');
-            $('#michelle svg > g').removeClass("hide");
+            $('#michelle > g').removeClass('active');
+            $('#michelle > g').removeClass("hide");
 
 
         }
