@@ -93,6 +93,10 @@ $(document).ready(function () {
             .attr("data-url", d => d.URL)
             .attr("data-views", d => d.Views)
             .attr("data-title", d => d.Title)
+            .attr("data-orientation", d => d.Orientamento)
+            .attr("data-like", d => d.Like)
+            .attr("data-comments", d => d.Comments)
+
             .style("opacity", "0.6")
             .on("mouseover", handleMouseOver)
             .on("mouseout", handleMouseOut)
@@ -173,6 +177,38 @@ $(document).ready(function () {
         })
 
 
+        $('#reaction-viz circle').on("click", function () {
+
+            var id = $(this).data('url');
+            var title = $(this).data('title');
+            var views = $(this).data('views');
+            var comments = $(this).data('comments');
+            var orientation = $(this).data('orientation');
+
+            $('#sidebar, #overlay').addClass('is-visible');
+            var videoId = getId(id);
+
+            var iframeMarkup = '<iframe height="315" src="//www.youtube.com/embed/' +
+                videoId + '" frameborder="0" allowfullscreen></iframe>';
+
+
+
+            $('#sidebar').find(".video_iframe").html(iframeMarkup);
+            $('#sidebar').find(".video_orientation").html(orientation).addClass(orientation);
+            $('#sidebar').find(".video_title").html(title);
+            $('#sidebar').find(".video_views").html(numberWithCommas(views) + " VIEWS / " + numberWithCommas(comments) + " COMMENTS");
+
+        })
+
+
+        $('#overlay').click(function () {
+            $('#overlay, #sidebar').removeClass('is-visible');
+            $('#sidebar').find(".video_orientation").removeClass("feminist antifeminist neutral");
+            $('#sidebar').find(".video_iframe").html('');
+
+        });
+
+
         function reset() {
 
             circles.transition(t)
@@ -207,6 +243,10 @@ $(document).ready(function () {
     })
 
 });
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
 
 
 function getId(url) {
