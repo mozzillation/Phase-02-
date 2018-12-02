@@ -4,16 +4,16 @@ cover: /assets/images/covers/viz04.jpg
 number: 4
 ---
 ### Description
-The second protocol reveals that the biggest category of sources talking about feminism are newspapers. For this reason we decided to explore more deeply this topic using the range of years (2012-NOW) indicated for the fourth-wave feminism explored in the third protocol.
+The second protocol reveals that the biggest category of sources talking about feminism are newspapers. For this reason we decided to explore more deeply this topic using the range of years (2012-Today) indicated by the fourth-wave feminism explored in the third protocol. The streamgraph’s aim is to show the **involvement of newspaper sources** appearing on Google News from the start of the fourth-wave feminism (2012) until today.
 
-To identify the online newspapers that are more involved in the fourth-wave and how the attention towards feminism evolved during the years, we searched on Google News for the most relevant articles concerning feminism published from 2012 to 2018. As can be seen, the biggest amount of articles was published in 2013, year in which the controversies around feminism started to spread around media and social networks, followed by 2018, the year that witnessed the rising of MeToo. Each year, according to these news, feminism is visually represented by different categories of images: the wider category is the one represented by stakeholder and celebrities (351 images), followed by protests (114 images), symbology (98 images), stock images (94 images) and movie and videos (51 images).
+The first part of the visualization is a streamgraph, whose aim is to visualize how the sources treat the theme during the years, how much the theme is exploited by the news and if there is a provider that, more than the others, could be identified as the most involved in the topic. It is clear that the biggest number of articles was published in 2013, year in which the controversies around feminism started to spread around media and social networks, followed by 2018, the year that witnessed the rising of MeToo. It’s evident that The Guardian is the most involved source in the topic since 2013 with 37 articles published confirming leadership over time.
+
+The second graph represents the different **categories of images** pushed to the mainstream by newspapers for each year. What is interesting to notice is that the larger category is **“stakeholders and celebrities”** with 351 image. The hegemony of this category on the others led us to investigate who are the main personalities involved in feminism in the next protocol.
 
 ### Protocol
-While for the first visualization we only used online sources with more than 10 articles obtaining 15 newspapers, for the visualization of the images we used all the results gathered from the research on Google News: each link was scraped for its preview image, leading to a corpus of 708 images that were distributed to the different categories over the years. 
-
 ![example of protocol]({{'/assets/images/protocols/protocol-04.svg' | relative_url }})
 
-
+We used the word “feminism” as a query for our Google News research. We collected all the sources of the news, the date and the preview images of all the articles from 2012 until today. While for the first visualization we used only online sources with more than 10 articles obtaining 15 newspapers, for the visualization of the images we used all the results getting a corpus of 708 images that were distributed in different categories over the years. 
 
 ### Data
 ##### Data Source: [Google News](https://news.google.com/)

@@ -4,18 +4,13 @@ cover: /assets/images/covers/viz01.jpg
 number: 1
 ---
 ### Description
-Going back to the [first phase of research](https://densitydesign.github.io/teaching-dd14/es01/group01/), it became necessary to examine the semantic spheres related to sexism in order to explore new areas of daily misogyny. For this research we used Wikipedia and Seealsology to see the different links between the pages related to sexism. From the analysis it was possible to insert each page into five macro-categories: feminism, gender studies, discrimination, women’s history and LGBT studies.
-
-<!--![example of secondary visualization]({{'/assets/images/protocols/howto-01.svg' | relative_url }})-->
-In the visualization each dot stands for a Wikipedia page while the distance value represents the degrees of separation from the initial seed. The visualization shows that the main category is feminism followed by gender studies and discrimination, so in the next phases we continued the project towards this topics.
+Following the first phase research we wanted to examine the semantic spheres related to sexism.
+In order to do that we used Wikipedia as a reliable source. In the visualization, produced by the results of the research, each dot stands for a Wikipedia page related to the query **“sexism”** while the distance value represents the degrees of separation from its page. By clicking on the categories button the dots divide into the five clusters making visible that the main subjects concerning sexism is “feminism”, followed by “gender studies”, “discrimination”, “women’s history” and “LGBT studies”. The amplitude of the area of feminism strictly links this theme to sexism, making it worthy to be explored more, designing a path to follow in the next phases.
 
 ### Protocol
 ![example of protocol]({{'/assets/images/protocols/protocol-01.svg' | relative_url }})
 
-During the clustering of each Wikipedia page, it emerged that many of the pages had more than one category: it was decided to consider the most frequent one within the entire dataset in order to return as wide as possible categories. Moreover, the pages not related to misogyny were discarded.
-
-
-
+In order to understand the topics related to sexism we exploited the tool Seealsology to visualize the related pages connected to the “sexism” Wikipedia page. After that we clustered the results using the categories defined by Wikipedia itself. During the clustering phase, it emerged that many of the pages had more than one category, so it was decided to consider the most frequent one within the entire dataset in order to return as wide as possible categories. The pages not coherent with the wider categories were excluded from the visualization.
 
 ### Data
 ##### Data Source: [Wikipedia](https://en.wikipedia.org), [SeeAlsology](http://tools.medialab.sciences-po.fr/seealsology/)
