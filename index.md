@@ -1,6 +1,6 @@
 ---
 title: Do we still need Feminism?
-cover: /assets/images/covers/cover@xl.jpeg
+cover: /assets/images/covers/cover.gif
 members: Giuliano Mozzillo, Jacopo Perico, Noemi Schiavi, Amarildo Shelna, Daniele Zanetti, Shan Zhu, Alice Ziantoni
 description: An overview of the debate through the online activism’s contents and what’s underneath their surface, highlighting the opinion of the small communities
 ---
