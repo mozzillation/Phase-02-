@@ -1,6 +1,6 @@
 ---
 title: Which is the orientation of the most viewed videos about feminism and which is the reaction of the users?
-cover: /assets/images/covers/viz04.jpg
+cover: /assets/images/covers/viz06.jpg
 number: 6
 ---
 ### Description

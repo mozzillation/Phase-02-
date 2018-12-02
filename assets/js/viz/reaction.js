@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+    $.get("./assets/images/protocols/howto-06.1.svg", function (data) {
+        var svg = new XMLSerializer().serializeToString(data.documentElement);
+        $('#howto').append(svg);
+    });
+
+
+
     // IN UN MONDO FANTASTICO DI ANIMAZIONI
     var t = d3.transition()
         .duration(500)
@@ -11,7 +18,6 @@ $(document).ready(function () {
 
     let force = 1
 
-    //squares scale
     let dimMin = 3
     let dimMax = 50
 
@@ -21,10 +27,6 @@ $(document).ready(function () {
         .attr("height", height + margin / 2)
         .style("background", "#1A2029")
 
-    //scales
-    let colors = d3.scaleOrdinal()
-        .domain(["feminist", "antifeminist", "neutral"])
-        .range(["#FF3502", "#4A74FF", "#F2D51C"])
 
     let x = d3.scaleLinear()
         .domain([0, 150000])
@@ -56,10 +58,14 @@ $(document).ready(function () {
         .tickSize(-width + margin)
         .ticks(10)
 
+    let colors = d3.scaleOrdinal()
+        .domain(["feminist", "antifeminist", "neutral"])
+        .range(["#FF3502", "#4A74FF", "#F2D51C"])
+
+
     d3.csv("./assets/js/viz/data/reactions.csv", function (error, data) {
         if (error) throw error
 
-        //        x.domain(d3.extent(data, d => +d.Comments))
         xScale.domain(d3.extent(data, d => +d.Comments))
 
         size.domain(d3.extent(data, d => +d.Views))
@@ -69,7 +75,6 @@ $(document).ready(function () {
             .attr("width", width)
             .attr("height", height)
 
-        //axis
         svg.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + (height) + ")")
@@ -96,6 +101,7 @@ $(document).ready(function () {
             .attr("data-orientation", d => d.Orientamento)
             .attr("data-like", d => d.Like)
             .attr("data-comments", d => d.Comments)
+            .attr("data-reaction", d => d.Reactions)
 
             .style("opacity", "0.6")
             .on("mouseover", handleMouseOver)
@@ -112,7 +118,6 @@ $(document).ready(function () {
             .attr("cy", d => y(d.Reactions))
             .attr("class", "point");
 
-        //x-axis label.
         svg.append("text")
             .attr("class", "x axis-label")
             .attr("text-anchor", "end")
@@ -120,7 +125,6 @@ $(document).ready(function () {
             .attr("y", height - 6)
             .text("COMMENTS");
 
-        //y-axis label.
         svg.append("text")
             .attr("class", "y axis-label")
             .attr("text-anchor", "end")
@@ -131,16 +135,14 @@ $(document).ready(function () {
             .text("REACTIONS");
 
 
-        function handleMouseOver(d, i) { // Add interactivity
+        function handleMouseOver(d, i) {
             d3.select(this).style("opacity", 1);
         }
 
-        function handleMouseOut(d, i) { // Add interactivity
+        function handleMouseOut(d, i) {
             d3.select(this).style("opacity", 0.6);
         }
 
-
-        //apply fisheye
         svg.on("mousemove", function () {
 
             let mouse = d3.mouse(this)
@@ -184,6 +186,8 @@ $(document).ready(function () {
             var views = $(this).data('views');
             var comments = $(this).data('comments');
             var orientation = $(this).data('orientation');
+            var reaction = $(this).data('reaction');
+            var like = $(this).data('like');
 
             $('#sidebar, #overlay').addClass('is-visible');
             var videoId = getId(id);
@@ -191,12 +195,29 @@ $(document).ready(function () {
             var iframeMarkup = '<iframe height="315" src="//www.youtube.com/embed/' +
                 videoId + '" frameborder="0" allowfullscreen></iframe>';
 
-
-
             $('#sidebar').find(".video_iframe").html(iframeMarkup);
             $('#sidebar').find(".video_orientation").html(orientation).addClass(orientation);
             $('#sidebar').find(".video_title").html(title);
             $('#sidebar').find(".video_views").html(numberWithCommas(views) + " VIEWS / " + numberWithCommas(comments) + " COMMENTS");
+
+            console.log("REACTION", reaction);
+            console.log("LIKE", like);
+
+            var percentageLike = Math.round(like * 100 / reaction);
+            var percentageDislike = Math.round(100 - percentageLike);
+
+
+            $('#sidebar').find(".video_reaction .like").css({
+                width: percentageLike + "%"
+            })
+
+            $('#sidebar').find(".video_reaction .dislike").css({
+                width: percentageDislike + "%"
+            })
+            $('#sidebar').find(".video_percentage .like").html(percentageLike + "%");
+            $('#sidebar').find(".video_percentage .dislike").html(percentageDislike + "%");
+
+
 
         })
 
@@ -218,12 +239,6 @@ $(document).ready(function () {
             point.transition(t)
                 .attr("cx", d => x(d.Comments))
                 .attr("cy", d => y(d.Reactions))
-
-            //                        labels
-            //                            .attr("x", d => x(d.muslim_population))
-            //                            .attr("y", d => y(d.GINI_index) - 2)
-            //                            .attr("opacity", 0.4)
-
 
             xAxis = d3.axisBottom(x)
                 .tickFormat(d3.format(".2s"))

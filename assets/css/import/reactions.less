@@ -5,6 +5,17 @@
     overflow: hidden;
 
 
+    #howto {
+        padding-top: 25px;
+    }
+
+    #howto2 {
+        img {
+            height: 25px;
+            width: auto;
+        }
+    }
+
     #overlay {
         background: @dark;
         position: absolute;
@@ -58,6 +69,19 @@
                 box-sizing: border-box;
             }
 
+            &_header {
+                width: 100%;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 10px;
+            }
+
+            &_all {
+                width: 100px;
+            }
+
             &_title {
                 font-size: 26px;
                 color: @white;
@@ -65,23 +89,61 @@
 
             &_orientation {
                 font-size: 18px;
-                padding-bottom: 5px;
-                margin-bottom: 10px;
                 text-transform: uppercase;
+
 
                 &.antifeminist {
                     color: #4A74FF;
-                    border-bottom: 1px solid #4A74FF;
                 }
 
                 &.feminist {
                     color: #FF3502;
-                    border-bottom: 1px solid #FF3502;
                 }
 
                 &.neutral {
                     color: #F2D51C;
-                    border-bottom: 1px solid #F2D51C;
+                }
+
+            }
+
+            &_reaction {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+
+
+
+                .like,
+                .dislike {
+                    height: 2px;
+                    width: 50%;
+
+                }
+
+                .like {
+                    background: #30D840;
+                }
+
+                .dislike {
+                    background: @primary;
+                }
+            }
+
+            &_percentage {
+                display: flex;
+                align-content: center;
+                align-items: center;
+
+                justify-content: space-between;
+
+                .like {
+                    color: #30D840;
+                }
+
+                .dislike {
+                    color: @primary;
                 }
 
             }
@@ -91,7 +153,7 @@
             &_views {
                 color: @light;
                 font-size: 18px;
-                padding-top: 10px;
+
             }
 
             &_iframe {
