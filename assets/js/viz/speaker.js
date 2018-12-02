@@ -102,8 +102,33 @@ $(document).ready(function () {
             $this = $(this);
 
             var name = $(this).data('name');
+            var orientation;
+
+            if (name == "Milo Yiannopoulus") {
+
+                orientation = "antifeminist"
+
+            } else {
+                orientation = "pro feminist"
+            }
+
+            $('#speaker .orientation').toggleClass('is-visible').removeClass("pro feminist antifeminist").addClass(orientation).html(orientation);
+
 
             $('#speaker .reactions').toggleClass('is-visible');
+
+            $('#speaker').on('mousemove', function (evt) {
+                var x = evt.pageX - $(this).offset().left + 10;
+                var y = evt.pageY - $(this).offset().top + +20;
+
+
+
+
+                $('#speaker .orientation').css({
+                    top: y,
+                    left: x
+                });
+            })
 
             $('#speaker-viz svg #people > g').not($this).toggleClass('is-hidden');
             $('#speaker-viz svg #views > g, #speaker-viz svg #video > g ').not("[data-name='" + name + "']").toggleClass('is-hidden');
