@@ -18,4 +18,4 @@ We used the word “feminism” as a query for our Google News research. We coll
 ### Data
 ##### Data Source: [Google News](https://news.google.com/)
 ##### Timestamp: 11/11/2018
-##### [View Data (6MB)]({{ '/dataset/viz04.zip' | relative_url }})
+##### [View Data (6.1MB)]({{ '/dataset/viz04.zip' | relative_url }})

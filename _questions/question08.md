@@ -18,4 +18,4 @@ the comments of the threads in the MGTOW’s forums and counted the number of gl
 ### Data
 ##### Data Source: [MGTOW Forum](https://www.mgtow.com/forums/)
 ##### Timestamp: 27/11/2018
-##### [View Data (51kb)]({{ '/dataset/viz08.xls' | relative_url }})
+##### [View Data (51KB)]({{ '/dataset/viz08.xls' | relative_url }})

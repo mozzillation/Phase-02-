@@ -14,4 +14,4 @@ After analyzing the glossary used by antifeminists groups we wanted to understan
 ### Data
 ##### Data Source: [The AntiFeminist Bank FB Page](https://www.facebook.com/antifeministbank/)
 ##### Timestamp: 21/11/2018
-##### [View Data (20MB)]({{ '/dataset/viz04.zip' | relative_url }})
+##### [View Data (20.2MB)]({{ '/dataset/viz09.zip' | relative_url }})

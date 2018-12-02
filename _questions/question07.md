@@ -19,4 +19,4 @@ We searched “antifeminism” on Wikipedia and we analyzed the See also section
 ### Data
 ##### Data Source: [Reddit](https://www.reddit.com/)
 ##### Timestamp: 27/11/2018
-##### [View Data (31KB)]({{ '/dataset/viz07.xlsx' | relative_url }})
+##### [View Data (29KB)]({{ '/dataset/viz07.xlsx' | relative_url }})

@@ -20,6 +20,6 @@ In order to find the speeches about feminism we searched on Youtube “sexual as
 The stacked bar chart was obtained by extracting the transcription of the most viewed video of the top three speakers of feminism. We extracted it from the specific section of Youtube and divided it according to the themes treated and counting the number of words for each and the corrisponding timing of the video.
 
 ### Data
-##### Data Source: [DA FARE](https://news.google.com/)
+##### Data Source: [Youtube](https://www.youtube.com/)
 ##### Timestamp: 11/11/2018
-##### [View Data (6MB)]({{ '/dataset/viz04.zip' | relative_url }})
+##### [View Data (70KB)]({{ '/dataset/viz05.zip' | relative_url }})

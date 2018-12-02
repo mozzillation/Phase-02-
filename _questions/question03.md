@@ -18,4 +18,4 @@ The spark line visualization of the fourth wave’s events is based on the data 
 ### Data
 ##### Data Source: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page), [Google Trends](https://trends.google.com/)
 ##### Timestamp: 13/11/2018
-##### [View Data (492KB)]({{ '/dataset/viz03.zip' | relative_url }})
+##### [View Data (360KB)]({{ '/dataset/viz03.zip' | relative_url }})

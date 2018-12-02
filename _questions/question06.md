@@ -15,6 +15,6 @@ To understand the **user’s behaviour** we decided to search for “feminism”
 
 
 ### Data
-##### Data Source: [Youtube](https://news.google.com/)
+##### Data Source: [Youtube](https://www.youtube.com/)
 ##### Timestamp: 02/12/2018
-##### [View Data (49KB)]({{ '/dataset/viz06.xlsx' | relative_url }})
+##### [View Data (47KB)]({{ '/dataset/viz06.xlsx' | relative_url }})
